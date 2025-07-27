@@ -1,0 +1,47 @@
+{
+  "test_full_features": {
+	"lines": [
+	  {
+		"speaker": "Sosuke",
+		"emotion": "default",
+		"text": "Hey![pause:0.5] I have some [i]important[/i] questions for you..."
+	  },
+	  {
+		"speaker": "Yuka",
+		"emotion": "default",
+		"text": "[speed:slow]Oh?"
+	  },
+	  {
+		"speaker": "Sosuke",
+		"emotion": "default",
+		"text": "[speed:normal]First...[pause:0.5] do you know what [type:word, eng:fridge, jpn:冷蔵庫] means?"
+	  },
+	  {
+		"speaker": "Yuka",
+		"emotion": "default",
+		"text": "Yeah.[pause:1.0] It’s where you keep [type:word, eng:cake, jpn:ケーキ]."
+	  },
+	  {
+		"speaker": "Sosuke",
+		"emotion": "default",
+		"text": "[speed:slow][i]Hmm... interesting.[/i] [speed:normal][type:phrase, eng:Did you eat it, jpn:食べたの]?"
+	  },
+	  {
+		"speaker": "Yuka",
+		"emotion": "default",
+		"text": "[b]What?![/b][pause:1.0] [b]No way![/b]",
+		"actions": [
+		  { "type": "sound", "value": "ui/Wood_Block.ogg" },
+		]
+	  },
+	  {
+		"speaker": "Sosuke",
+		"emotion": "default",
+		"text": "Let's see...",
+		"actions": [
+		  { "type": "open_choice_menu", "value": "Yuka" }
+		]
+	  }
+	]
+  }
+}

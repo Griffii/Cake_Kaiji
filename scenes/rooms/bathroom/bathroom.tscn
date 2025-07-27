@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://f3xauoyy05t8"]
+
+[ext_resource type="Texture2D" uid="uid://clslhbvkcjbrh" path="res://scenes/rooms/bathroom/Bathroom_01.png" id="1_w56nl"]
+[ext_resource type="Script" uid="uid://cwqx4ei01obva" path="res://scenes/rooms/bathroom/bathroom.gd" id="1_xj8fb"]
+
+[node name="Bathroom" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_xj8fb")
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_w56nl")

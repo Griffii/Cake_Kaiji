@@ -1,0 +1,111 @@
+[gd_scene load_steps=10 format=3 uid="uid://cr3udxyrdmy8y"]
+
+[ext_resource type="Script" uid="uid://dhtglflva1t36" path="res://scripts/systems/game_overlay.gd" id="1_c1djp"]
+[ext_resource type="FontFile" uid="uid://c2lvtb2jwo8e6" path="res://assets/fonts/BadComic-Regular.ttf" id="2_yhx2g"]
+[ext_resource type="AudioStream" uid="uid://cwpouhgynoh5p" path="res://assets/audio/sfx/ui/Minimalist_Click.ogg" id="3_s78s3"]
+[ext_resource type="AudioStream" uid="uid://cvqe21dmc5alj" path="res://assets/audio/sfx/ui/Wood_Block.ogg" id="4_1cu4j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yhx2g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4cufx"]
+bg_color = Color(0.305882, 0.305882, 0.305882, 0.709804)
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s78s3"]
+bg_color = Color(1, 1, 1, 1)
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1cu4j"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64sri"]
+bg_color = Color(0.838897, 0.838897, 0.838897, 1)
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[node name="Game_Overlay" type="CanvasLayer"]
+script = ExtResource("1_c1djp")
+
+[node name="Journal_Button" type="Button" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 150)
+offset_left = 1661.0
+offset_top = 922.0
+offset_right = 1861.0
+offset_bottom = 1072.0
+pivot_offset = Vector2(98, 147)
+theme_override_colors/font_disabled_color = Color(0.482353, 0.482353, 0.482353, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_yhx2g")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yhx2g")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_4cufx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s78s3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1cu4j")
+theme_override_styles/normal = SubResource("StyleBoxFlat_64sri")
+text = "Journal"
+
+[node name="hover_sfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_s78s3")
+bus = &"SFX"
+
+[node name="click_sfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_1cu4j")
+bus = &"SFX"
+
+[connection signal="mouse_entered" from="Journal_Button" to="." method="_on_journal_button_mouse_entered"]
+[connection signal="mouse_exited" from="Journal_Button" to="." method="_on_journal_button_mouse_exited"]
+[connection signal="pressed" from="Journal_Button" to="." method="_on_journal_button_pressed"]

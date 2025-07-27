@@ -1,0 +1,97 @@
+[gd_scene load_steps=11 format=3 uid="uid://c4fxifvgqs6vk"]
+
+[ext_resource type="Script" uid="uid://clahylryhidk2" path="res://scripts/systems/journal.gd" id="1_fqpol"]
+[ext_resource type="Texture2D" uid="uid://bg8bnhbl8ip5y" path="res://assets/images/UI/notebook no cover.png" id="2_laicm"]
+[ext_resource type="Texture2D" uid="uid://c4bjh21l2a3dh" path="res://assets/images/UI/Coil Holes.png" id="3_31kpw"]
+[ext_resource type="PackedScene" uid="uid://yvb8o0xshywp" path="res://scenes/ui/journal_map.tscn" id="4_laicm"]
+[ext_resource type="PackedScene" uid="uid://d4esbmy5okqdj" path="res://scenes/ui/buttons/back_button.tscn" id="6_a3wt0"]
+[ext_resource type="PackedScene" uid="uid://huxsydb6ejoh" path="res://scenes/ui/schedule_menu.tscn" id="6_xdb8u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_at28u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_31kpw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c8g8m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7tait"]
+
+[node name="Journal" type="CanvasLayer"]
+layer = 2
+script = ExtResource("1_fqpol")
+
+[node name="Journal_Cover" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_laicm")
+
+[node name="Coils" type="TextureRect" parent="."]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_31kpw")
+
+[node name="TabContainer_Left" type="TabContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 178.0
+offset_top = 85.0
+offset_right = -988.0
+offset_bottom = -124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/tab_focus = SubResource("StyleBoxEmpty_at28u")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_31kpw")
+current_tab = 0
+
+[node name="Map" parent="TabContainer_Left" instance=ExtResource("4_laicm")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="TabContainer_Right" type="TabContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 989.0
+offset_top = 81.0
+offset_right = -177.0
+offset_bottom = -122.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/tab_focus = SubResource("StyleBoxEmpty_c8g8m")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_7tait")
+tab_alignment = 2
+current_tab = 0
+
+[node name="Schedule" parent="TabContainer_Right" instance=ExtResource("6_xdb8u")]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Close_Button" parent="." instance=ExtResource("6_a3wt0")]
+custom_minimum_size = Vector2(150, 75)
+offset_left = 664.0
+offset_top = 378.0
+offset_right = 814.0
+offset_bottom = 453.0
+theme_override_font_sizes/font_size = 32
+text = "Close"
+
+[connection signal="pressed" from="Close_Button" to="." method="_on_close_button_pressed"]

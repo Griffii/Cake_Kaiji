@@ -1,0 +1,274 @@
+[gd_scene load_steps=8 format=3 uid="uid://huxsydb6ejoh"]
+
+[ext_resource type="Script" uid="uid://bdcwwwlv76438" path="res://scripts/systems/schedule_menu.gd" id="1_46u5k"]
+[ext_resource type="PackedScene" uid="uid://iu3w2s2twi5i" path="res://scenes/characters/character_portrait_box.tscn" id="1_i74hg"]
+[ext_resource type="Texture2D" uid="uid://domvim2lcjepo" path="res://assets/images/UI/panel-transparent-center-004.png" id="2_46u5k"]
+[ext_resource type="Texture2D" uid="uid://dyqdsbho2x607" path="res://assets/images/UI/morning.png" id="3_xvt0s"]
+[ext_resource type="FontFile" uid="uid://c2lvtb2jwo8e6" path="res://assets/fonts/BadComic-Regular.ttf" id="4_wslx4"]
+[ext_resource type="Texture2D" uid="uid://ua46jiq15yng" path="res://assets/images/UI/afternoon.png" id="5_nke8x"]
+[ext_resource type="Texture2D" uid="uid://dnkwgsa7tr4n6" path="res://assets/images/UI/evening.png" id="6_ahho5"]
+
+[node name="Schedule" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_46u5k")
+metadata/_tab_index = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Character_Grid" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 20
+columns = 4
+
+[node name="Yuka" parent="MarginContainer/VBoxContainer/Character_Grid" instance=ExtResource("1_i74hg")]
+layout_mode = 2
+char_name = "Yuka"
+flip_image = true
+can_hover = true
+
+[node name="Haruto" parent="MarginContainer/VBoxContainer/Character_Grid" instance=ExtResource("1_i74hg")]
+layout_mode = 2
+char_name = "Haruto"
+flip_image = true
+can_hover = true
+
+[node name="Ken" parent="MarginContainer/VBoxContainer/Character_Grid" instance=ExtResource("1_i74hg")]
+layout_mode = 2
+char_name = "Ken"
+flip_image = true
+can_hover = true
+
+[node name="Karin" parent="MarginContainer/VBoxContainer/Character_Grid" instance=ExtResource("1_i74hg")]
+layout_mode = 2
+char_name = "Karin"
+flip_image = true
+can_hover = true
+
+[node name="Kenichiro" parent="MarginContainer/VBoxContainer/Character_Grid" instance=ExtResource("1_i74hg")]
+layout_mode = 2
+char_name = "Kenichiro"
+flip_image = true
+can_hover = true
+
+[node name="Kiyomi" parent="MarginContainer/VBoxContainer/Character_Grid" instance=ExtResource("1_i74hg")]
+layout_mode = 2
+char_name = "Kiyomi"
+flip_image = true
+can_hover = true
+
+[node name="Mikan" parent="MarginContainer/VBoxContainer/Character_Grid" instance=ExtResource("1_i74hg")]
+layout_mode = 2
+char_name = "Mikan"
+flip_image = true
+can_hover = true
+
+[node name="Pii-Chan" parent="MarginContainer/VBoxContainer/Character_Grid" instance=ExtResource("1_i74hg")]
+layout_mode = 2
+char_name = "Pii-Chan"
+flip_image = true
+can_hover = true
+
+[node name="Schedule_Box" type="NinePatchRect" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 450)
+layout_mode = 2
+texture = ExtResource("2_46u5k")
+patch_margin_left = 17
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Schedule_Box"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Morning_Schedule" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Morning_Icon" type="TextureRect" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Morning_Schedule"]
+layout_mode = 2
+texture = ExtResource("3_xvt0s")
+
+[node name="Label_Container" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Morning_Schedule"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Morning_Schedule/Label_Container"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Morning_Schedule/Label_Container/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_wslx4")
+theme_override_font_sizes/font_size = 32
+text = "Place:"
+
+[node name="Morning_Place" type="Label" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Morning_Schedule/Label_Container/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_wslx4")
+theme_override_font_sizes/font_size = 32
+text = "???"
+autowrap_mode = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Morning_Schedule/Label_Container"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Doing" type="Label" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Morning_Schedule/Label_Container/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_wslx4")
+theme_override_font_sizes/font_size = 32
+text = "Doing:"
+
+[node name="Morning_Activity" type="Label" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Morning_Schedule/Label_Container/HBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_wslx4")
+theme_override_font_sizes/font_size = 32
+text = "???"
+autowrap_mode = 3
+
+[node name="Afternoon_Schedule" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Afternoon_Icon" type="TextureRect" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Afternoon_Schedule"]
+layout_mode = 2
+texture = ExtResource("5_nke8x")
+
+[node name="Label_Container" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Afternoon_Schedule"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Afternoon_Schedule/Label_Container"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Afternoon_Schedule/Label_Container/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_wslx4")
+theme_override_font_sizes/font_size = 32
+text = "Place:"
+
+[node name="Afternoon_Place" type="Label" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Afternoon_Schedule/Label_Container/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_wslx4")
+theme_override_font_sizes/font_size = 32
+text = "???"
+autowrap_mode = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Afternoon_Schedule/Label_Container"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Doing" type="Label" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Afternoon_Schedule/Label_Container/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_wslx4")
+theme_override_font_sizes/font_size = 32
+text = "Doing:"
+
+[node name="Afternoon_Activity" type="Label" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Afternoon_Schedule/Label_Container/HBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_wslx4")
+theme_override_font_sizes/font_size = 32
+text = "???"
+autowrap_mode = 3
+
+[node name="Evening_Schedule" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Evening_Icon" type="TextureRect" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Evening_Schedule"]
+layout_mode = 2
+texture = ExtResource("6_ahho5")
+
+[node name="Label_Container" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Evening_Schedule"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Evening_Schedule/Label_Container"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Evening_Schedule/Label_Container/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_wslx4")
+theme_override_font_sizes/font_size = 32
+text = "Place:"
+
+[node name="Evening_Place" type="Label" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Evening_Schedule/Label_Container/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_wslx4")
+theme_override_font_sizes/font_size = 32
+text = "???"
+autowrap_mode = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Evening_Schedule/Label_Container"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Doing" type="Label" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Evening_Schedule/Label_Container/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_wslx4")
+theme_override_font_sizes/font_size = 32
+text = "Doing:"
+
+[node name="Evening_Activity" type="Label" parent="MarginContainer/VBoxContainer/Schedule_Box/MarginContainer/VBoxContainer/Evening_Schedule/Label_Container/HBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_wslx4")
+theme_override_font_sizes/font_size = 32
+text = "???"
+autowrap_mode = 3

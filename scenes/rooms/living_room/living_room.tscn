@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhs2tppvmsklo"]
+
+[ext_resource type="Texture2D" uid="uid://tj6b7sayy6ya" path="res://scenes/rooms/living_room/Living_Room_01.png" id="1_0supr"]
+[ext_resource type="Script" uid="uid://0mos1doed5cg" path="res://scenes/rooms/living_room/living_room.gd" id="1_1f125"]
+[ext_resource type="Texture2D" uid="uid://bg3wrmb5o2mdy" path="res://scenes/characters/Kiyomi/Kiyomi_default.png" id="3_l7vlx"]
+[ext_resource type="Texture2D" uid="uid://cfldljuyvjr30" path="res://scenes/characters/Haruto/Haruto_default.png" id="4_3h1gr"]
+
+[node name="Living Room" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_1f125")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0supr")
+
+[node name="Grandma" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 587.0
+offset_top = 396.0
+offset_right = 843.0
+offset_bottom = 652.0
+texture_normal = ExtResource("3_l7vlx")
+
+[node name="Haruto" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1500.0
+offset_top = 521.0
+offset_right = 1741.0
+offset_bottom = 762.0
+texture_normal = ExtResource("4_3h1gr")
+flip_h = true
+
+[connection signal="pressed" from="Grandma" to="." method="_on_grandma_pressed"]

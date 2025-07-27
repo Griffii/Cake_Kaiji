@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0m7w3svocp6j"]
+
+[ext_resource type="FontFile" uid="uid://c2lvtb2jwo8e6" path="res://assets/fonts/BadComic-Regular.ttf" id="1_sbqxc"]
+[ext_resource type="Script" uid="uid://bygq4aq6jm7e0" path="res://scripts/dailogue/vocab.gd" id="2_ctxnm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ctxnm"]
+bg_color = Color(0.243137, 0.196078, 0.843137, 1)
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ctxnm"]
+size = Vector2(0, 20)
+
+[node name="Vocab" type="Label"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -26.5
+offset_right = 63.0
+offset_bottom = 26.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(65, 52.5)
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_sbqxc")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_ctxnm")
+text = "Vocab"
+script = ExtResource("2_ctxnm")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ctxnm")

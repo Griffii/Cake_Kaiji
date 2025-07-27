@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgtnwijnvpoxh"]
+
+[ext_resource type="PackedScene" uid="uid://uojjbst5h7gn" path="res://scenes/characters/character_card.tscn" id="1_1hnf3"]
+
+[node name="Family" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+metadata/_tab_index = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 733.0
+offset_bottom = 594.0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/v_separation = 60
+columns = 3
+
+[node name="Sosuke" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("1_1hnf3")]
+layout_mode = 2
+character_name = "Sosuke"
+
+[node name="Yuka" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("1_1hnf3")]
+layout_mode = 2
+character_name = "Yuka"
+
+[node name="Haruto" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("1_1hnf3")]
+layout_mode = 2
+character_name = "Haruto"
+
+[node name="Ken" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("1_1hnf3")]
+layout_mode = 2
+character_name = "Ken"
+
+[node name="Karin" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("1_1hnf3")]
+layout_mode = 2
+character_name = "Karin"
+
+[node name="Kenichiro" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("1_1hnf3")]
+layout_mode = 2
+character_name = "Kenichiro"
+
+[node name="Kiyomi" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("1_1hnf3")]
+layout_mode = 2
+character_name = "Kiyomi"
+
+[node name="Mikan" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("1_1hnf3")]
+layout_mode = 2
+character_name = "Mikan"
+
+[node name="Pii" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("1_1hnf3")]
+layout_mode = 2
+character_name = "Pii"

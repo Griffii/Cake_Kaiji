@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://cq1t1yufpmr2a"]
+
+[ext_resource type="Script" uid="uid://dy1mrn5r0vc84" path="res://scripts/dailogue/hint_popup.gd" id="1_ff8ht"]
+[ext_resource type="FontFile" uid="uid://dulrb2te632oi" path="res://assets/fonts/NotoSansJP-Regular.ttf" id="2_vanhx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ff8ht"]
+bg_color = Color(0.40147, 0.53496, 0.341412, 1)
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.133196, 0.133196, 0.133196, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[node name="Label" type="Label"]
+top_level = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -24.0
+offset_right = 37.5
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_vanhx")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_ff8ht")
+text = "日本語"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_ff8ht")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://b454v4gk0fvri"]
+
+[ext_resource type="Script" uid="uid://040xg3kw4jst" path="res://scenes/rooms/kitchen/kitchen.gd" id="1_hsnni"]
+[ext_resource type="Texture2D" uid="uid://dngwf8utnm68a" path="res://scenes/rooms/kitchen/Kitchen_02.png" id="1_wd0d2"]
+
+[node name="Kitchen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_hsnni")
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wd0d2")

@@ -1,0 +1,152 @@
+[gd_scene load_steps=3 format=3 uid="uid://yvb8o0xshywp"]
+
+[ext_resource type="Script" uid="uid://be4kcnwtykexr" path="res://scripts/systems/journal_map.gd" id="1_g8ucf"]
+[ext_resource type="Texture2D" uid="uid://ccgw7f3cpohxu" path="res://assets/images/UI/2D Map Draft.png" id="1_pxtll"]
+
+[node name="Map" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_g8ucf")
+metadata/_tab_index = 0
+
+[node name="Map_Base" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -177.0
+offset_top = -114.0
+offset_right = 989.0
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_pxtll")
+
+[node name="Living Room" type="Button" parent="Map_Base"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 0
+offset_left = 287.0
+offset_top = 562.0
+offset_right = 437.0
+offset_bottom = 612.0
+text = "Living Room"
+
+[node name="Kitchen" type="Button" parent="Map_Base"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 0
+offset_left = 677.0
+offset_top = 596.0
+offset_right = 827.0
+offset_bottom = 646.0
+text = "Kitchen"
+
+[node name="Hallway" type="Button" parent="Map_Base"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 0
+offset_left = 514.0
+offset_top = 367.0
+offset_right = 664.0
+offset_bottom = 417.0
+text = "Hallway"
+
+[node name="Office" type="Button" parent="Map_Base"]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 264.0
+offset_right = 343.0
+offset_bottom = 331.0
+text = "Office"
+
+[node name="Garage" type="Button" parent="Map_Base"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 0
+offset_left = 738.0
+offset_top = 122.0
+offset_right = 933.0
+offset_bottom = 267.0
+text = "Garage"
+
+[node name="Yukas Room" type="Button" parent="Map_Base"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 0
+offset_left = 464.0
+offset_top = 123.0
+offset_right = 691.0
+offset_bottom = 224.0
+text = "Yukas Room"
+
+[node name="Sosukes Room" type="Button" parent="Map_Base"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 0
+offset_left = 467.0
+offset_top = 227.0
+offset_right = 691.0
+offset_bottom = 351.0
+text = "Sosukes Room"
+
+[node name="Parents Room" type="Button" parent="Map_Base"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 0
+offset_left = 229.0
+offset_top = 123.0
+offset_right = 463.0
+offset_bottom = 237.0
+text = "Parents Room"
+
+[node name="Grandparents Room" type="Button" parent="Map_Base"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 375.0
+offset_right = 318.0
+offset_bottom = 451.0
+text = "Grandparents
+Room"
+
+[node name="Shed" type="Button" parent="Map_Base"]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 810.0
+offset_right = 302.0
+offset_bottom = 901.0
+text = "Shed"
+
+[node name="Yard" type="Button" parent="Map_Base"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 0
+offset_left = 465.0
+offset_top = 723.0
+offset_right = 615.0
+offset_bottom = 773.0
+text = "Yard"
+
+[node name="Bathroom" type="Button" parent="Map_Base"]
+layout_mode = 0
+offset_left = 777.0
+offset_top = 272.0
+offset_right = 855.0
+offset_bottom = 370.0
+text = "Bath
+room"
+
+[node name="Laundry" type="Button" parent="Map_Base"]
+layout_mode = 0
+offset_left = 609.0
+offset_top = 434.0
+offset_right = 712.0
+offset_bottom = 552.0
+text = "Laundry
+"
+
+[connection signal="pressed" from="Map_Base/Living Room" to="." method="_on_living_room_pressed"]
+[connection signal="pressed" from="Map_Base/Kitchen" to="." method="_on_kitchen_pressed"]
+[connection signal="pressed" from="Map_Base/Hallway" to="." method="_on_hallway_pressed"]
+[connection signal="pressed" from="Map_Base/Office" to="." method="_on_office_pressed"]
+[connection signal="pressed" from="Map_Base/Garage" to="." method="_on_garage_pressed"]
+[connection signal="pressed" from="Map_Base/Yukas Room" to="." method="_on_yukas_room_pressed"]
+[connection signal="pressed" from="Map_Base/Sosukes Room" to="." method="_on_sosukes_room_pressed"]
+[connection signal="pressed" from="Map_Base/Parents Room" to="." method="_on_parents_room_pressed"]
+[connection signal="pressed" from="Map_Base/Grandparents Room" to="." method="_on_grandparents_room_pressed"]
+[connection signal="pressed" from="Map_Base/Shed" to="." method="_on_shed_pressed"]
+[connection signal="pressed" from="Map_Base/Yard" to="." method="_on_yard_pressed"]
+[connection signal="pressed" from="Map_Base/Bathroom" to="." method="_on_bathroom_pressed"]
+[connection signal="pressed" from="Map_Base/Laundry" to="." method="_on_laundry_pressed"]

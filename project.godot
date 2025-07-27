@@ -1,0 +1,38 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="cake-kaiji"
+run/main_scene="uid://dw37ojf1p0aeg"
+config/features=PackedStringArray("4.4", "GL Compatibility")
+boot_splash/bg_color=Color(1, 0.960784, 0.882353, 1)
+boot_splash/image="uid://d36aucvvlar0"
+config/icon="uid://d36aucvvlar0"
+
+[autoload]
+
+SceneManager="*res://scripts/global/SceneManager.gd"
+DialogueManager="*res://scripts/global/DialogueManager.gd"
+CharacterData="*res://scripts/global/CharacterData.gd"
+GameFlags="*res://scripts/global/GameFlags.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="viewport"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

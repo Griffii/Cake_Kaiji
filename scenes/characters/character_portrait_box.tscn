@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://iu3w2s2twi5i"]
+
+[ext_resource type="Texture2D" uid="uid://bgivtk6fugadr" path="res://assets/images/UI/Black_Border.png" id="1_hhtrj"]
+[ext_resource type="Script" uid="uid://daoj32iqfjsi" path="res://scripts/systems/character_portrait_box.gd" id="1_mb1im"]
+[ext_resource type="Texture2D" uid="uid://dtc6dqsywn2db" path="res://scenes/characters/Mikan/Mikan_default.png" id="2_mb1im"]
+
+[node name="Character_Portrait" type="Control"]
+z_index = 1
+custom_minimum_size = Vector2(150, 165)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 150.0
+offset_bottom = 165.0
+scale = Vector2(0.7, 0.7)
+pivot_offset = Vector2(74.4606, 90.2624)
+script = ExtResource("1_mb1im")
+
+[node name="BG_Color" type="ColorRect" parent="."]
+unique_name_in_owner = true
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -4.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Portrait" type="TextureRect" parent="."]
+unique_name_in_owner = true
+z_index = -1
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = -4.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+texture = ExtResource("2_mb1im")
+expand_mode = 1
+
+[node name="Border" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hhtrj")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

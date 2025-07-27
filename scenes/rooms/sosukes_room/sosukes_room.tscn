@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0c24pj2xv4f4"]
+
+[ext_resource type="Script" uid="uid://cixwny0k8r414" path="res://scenes/rooms/sosukes_room/sosukes_room.gd" id="1_4bjod"]
+[ext_resource type="Texture2D" uid="uid://mdk72n0jpkfh" path="res://scenes/rooms/sosukes_room/Sosukes_Room.png" id="2_pkivs"]
+[ext_resource type="Shader" uid="uid://bbwegyrp2dke3" path="res://shaders/item_glow.gdshader" id="3_pkivs"]
+[ext_resource type="Texture2D" uid="uid://ctwhvvr4wqxnc" path="res://scenes/rooms/sosukes_room/Sosukes_Room_Corkboard.png" id="3_q302u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q302u"]
+shader = ExtResource("3_pkivs")
+shader_parameter/glow_enabled = false
+shader_parameter/glow_color = Color(1, 1, 0, 1)
+shader_parameter/glow_size = 25.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ryg8"]
+size = Vector2(634, 423)
+
+[node name="Sosukes_Room" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_4bjod")
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_pkivs")
+
+[node name="Corkboard" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_q302u")
+position = Vector2(665, 353)
+texture = ExtResource("3_q302u")
+
+[node name="Area" type="Area2D" parent="Corkboard"]
+position = Vector2(318, 165)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Corkboard/Area"]
+position = Vector2(-331, -165.5)
+shape = SubResource("RectangleShape2D_2ryg8")
+
+[connection signal="mouse_entered" from="Corkboard/Area" to="." method="_on_corkboard_area_mouse_entered"]
+[connection signal="mouse_exited" from="Corkboard/Area" to="." method="_on_corkboard_area_mouse_exited"]
