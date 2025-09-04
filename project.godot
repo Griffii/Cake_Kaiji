@@ -10,12 +10,12 @@ config_version=5
 
 [application]
 
-config/name="cake-kaiji"
+config/name="Detective Sosuke and the Missing Cake"
 run/main_scene="uid://dw37ojf1p0aeg"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/bg_color=Color(1, 0.960784, 0.882353, 1)
-boot_splash/image="uid://d36aucvvlar0"
-config/icon="uid://d36aucvvlar0"
+boot_splash/image="uid://duc8hcth0tct6"
+config/icon="uid://nep51safagok"
 
 [autoload]
 
@@ -23,6 +23,8 @@ SceneManager="*res://scripts/global/SceneManager.gd"
 DialogueManager="*res://scripts/global/DialogueManager.gd"
 CharacterData="*res://scripts/global/CharacterData.gd"
 GameFlags="*res://scripts/global/GameFlags.gd"
+DictionaryManager="*res://scripts/global/DictionaryDB.gd"
+MenuManager="*res://scripts/global/MenuManager.gd"
 
 [display]
 
@@ -34,5 +36,6 @@ window/stretch/mode="viewport"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

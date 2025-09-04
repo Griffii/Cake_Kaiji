@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bg3wrmb5o2mdy"
-path="res://.godot/imported/Kiyomi_default.png-4d46536fca3869ac5691b26984e3e9d3.ctex"
+uid="uid://bu46swqh5u6l5"
+path="res://.godot/imported/Kiyomi_Default.png-420e12460424df62d8c70788f23e245e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/characters/Kiyomi/Kiyomi_default.png"
-dest_files=["res://.godot/imported/Kiyomi_default.png-4d46536fca3869ac5691b26984e3e9d3.ctex"]
+source_file="res://scenes/characters/Kiyomi/Kiyomi_Default.png"
+dest_files=["res://.godot/imported/Kiyomi_Default.png-420e12460424df62d8c70788f23e245e.ctex"]
 
 [params]
 

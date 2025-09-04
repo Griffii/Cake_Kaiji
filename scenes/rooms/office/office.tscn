@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpsg00h8dh1qo"]
+[gd_scene load_steps=4 format=3 uid="uid://bpsg00h8dh1qo"]
 
+[ext_resource type="Script" uid="uid://btj8dl3ugxjc8" path="res://scenes/rooms/office/office.gd" id="1_r27d3"]
 [ext_resource type="Texture2D" uid="uid://ti5aof1g1dk3" path="res://scenes/rooms/office/Office_01.png" id="1_xck04"]
+[ext_resource type="Texture2D" uid="uid://dbuf38f2dhdsi" path="res://scenes/characters/Ken/Ken_Default_Full.png" id="3_r27d3"]
 
 [node name="Office" type="Control"]
 layout_mode = 3
@@ -10,6 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+script = ExtResource("1_r27d3")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -19,3 +22,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_xck04")
+
+[node name="Dad" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1087.0
+offset_top = 327.0
+offset_right = 2111.0
+offset_bottom = 1863.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("3_r27d3")
+
+[connection signal="pressed" from="Dad" to="." method="_on_dad_pressed"]

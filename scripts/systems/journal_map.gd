@@ -9,78 +9,78 @@ func close_map():
 
 func _on_kitchen_pressed() -> void:
 	if not SceneManager.current_room_name == "kitchen":
-		SceneManager.change_scene("res://scenes/rooms/kitchen/kitchen.tscn")
+		SceneManager.change_scene("kitchen")
 		close_map()
 
 
 func _on_bathroom_pressed() -> void:
 	if not SceneManager.current_room_name == "bathroom":
-		SceneManager.change_scene("res://scenes/rooms/bathroom/bathroom.tscn")
+		SceneManager.change_scene("bathroom")
 		close_map()
 
 
 func _on_laundry_pressed() -> void:
 	if not SceneManager.current_room_name == "laundry":
-		SceneManager.change_scene("res://scenes/rooms/laundry/laundry.tscn")
+		SceneManager.change_scene("laundry")
 		close_map()
 
 
 func _on_parents_room_pressed() -> void:
 	if not SceneManager.current_room_name == "parents_room":
-		SceneManager.change_scene("res://scenes/rooms/parents_room/parents_room.tscn")
+		SceneManager.change_scene("parents_room")
 		close_map()
 
 
 func _on_yukas_room_pressed() -> void:
 	if not SceneManager.current_room_name == "yukas_room":
-		SceneManager.change_scene("res://scenes/rooms/yukas_room/yukas_room.tscn")
+		SceneManager.change_scene("yukas_room")
 		close_map()
 
 
 func _on_sosukes_room_pressed() -> void:
 	if not SceneManager.current_room_name == "sosukes_room":
-		SceneManager.change_scene("res://scenes/rooms/sosukes_room/sosukes_room.tscn")
+		SceneManager.change_scene("sosukes_room")
 		close_map()
 
 
 func _on_living_room_pressed() -> void:
 	if not SceneManager.current_room_name == "living_room":
-		SceneManager.change_scene("res://scenes/rooms/living_room/living_room.tscn")
+		SceneManager.change_scene("living_room")
 		close_map()
 
 
 func _on_hallway_pressed() -> void:
 	if not SceneManager.current_room_name == "hallway":
-		SceneManager.change_scene("res://scenes/rooms/hallway/hallway.tscn")
+		SceneManager.change_scene("hallway")
 		close_map()
 
 
 func _on_office_pressed() -> void:
 	if not SceneManager.current_room_name == "office":
-		SceneManager.change_scene("res://scenes/rooms/office/office.tscn")
+		SceneManager.change_scene("office")
 		close_map()
 
 
 func _on_garage_pressed() -> void:
 	if not SceneManager.current_room_name == "garage":
-		SceneManager.change_scene("res://scenes/rooms/garage/garage.tscn")
+		SceneManager.change_scene("garage")
 		close_map()
 
 
 
 func _on_shed_pressed() -> void:
 	if not SceneManager.current_room_name == "shed":
-		SceneManager.change_scene("res://scenes/rooms/shed/shed.tscn")
+		SceneManager.change_scene("shed")
 		close_map()
 
 
 func _on_grandparents_room_pressed() -> void:
 	if not SceneManager.current_room_name == "grandparents_room":
-		SceneManager.change_scene("res://scenes/rooms/grandparents_room/grandparents_room.tscn")
+		SceneManager.change_scene("grandparents_room")
 		close_map()
 
 
 func _on_yard_pressed() -> void:
 	if not SceneManager.current_room_name == "yard":
-		SceneManager.change_scene("res://scenes/rooms/yard/yard.tscn")
+		SceneManager.change_scene("yard")
 		close_map()

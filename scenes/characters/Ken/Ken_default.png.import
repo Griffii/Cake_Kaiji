@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddb1mycd67r07"
-path="res://.godot/imported/Ken_default.png-06d7eca9aed852cc52d0ec7a0c47ed48.ctex"
+uid="uid://bdxvcwplaxtkw"
+path="res://.godot/imported/Ken_Default.png-d3003dd3c59616b2d464d3e90103d293.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/characters/Ken/Ken_default.png"
-dest_files=["res://.godot/imported/Ken_default.png-06d7eca9aed852cc52d0ec7a0c47ed48.ctex"]
+source_file="res://scenes/characters/Ken/Ken_Default.png"
+dest_files=["res://.godot/imported/Ken_Default.png-d3003dd3c59616b2d464d3e90103d293.ctex"]
 
 [params]
 

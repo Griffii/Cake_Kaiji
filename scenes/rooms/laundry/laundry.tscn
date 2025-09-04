@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cutafqybm1tsv"]
+[gd_scene load_steps=3 format=3 uid="uid://cutafqybm1tsv"]
 
 [ext_resource type="Texture2D" uid="uid://c86alx0ekoqum" path="res://scenes/rooms/laundry/Laundry_01.png" id="1_o687g"]
+[ext_resource type="Script" uid="uid://dqotqrrlywx88" path="res://scenes/rooms/laundry/laundry.gd" id="1_qi2u8"]
 
 [node name="Laundry" type="Control"]
 layout_mode = 3
@@ -10,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+script = ExtResource("1_qi2u8")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -19,3 +21,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_o687g")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1311.0
+offset_top = 453.0
+offset_right = 1755.0
+offset_bottom = 519.0
+theme_override_font_sizes/font_size = 42
+text = "LAUNDRY MINI GAME"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,14 +1,22 @@
-extends CanvasLayer
+extends Control
 
+@onready var anim_player = $AnimationPlayer
 
 func _ready() -> void:
-	%Map.close_journal.connect(close_journal_menu)
+	%Map.close_journal.connect(close)
+	
+	# Hide when first loaded in
+	visible = false
 
 
-func close_journal_menu():
+func open():
+	anim_player.play("open")
+	SceneManager.in_menu = true
+
+func close():
+	anim_player.play("close")
 	SceneManager.in_menu = false
-	queue_free()
 
 
 func _on_close_button_pressed() -> void:
-	close_journal_menu()
+	MenuManager.close_journal_menu()

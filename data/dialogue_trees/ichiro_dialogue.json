@@ -1,0 +1,300 @@
+{
+	"intro": {
+		"lines": [
+			{
+				"speaker": "Ichiro",
+				"emotion": "default",
+				"text": "Ah, Sosuke! You [type:verb,eng:startled,jpn:びっくりさせた] me. Need something?"
+			}
+		]
+	},
+
+	"question": {
+		"lines": [
+			{
+				"speaker": "Sosuke",
+				"emotion": "default",
+				"text": "I have some [type:noun, eng:questions, jpn:質問] for you.",
+				"actions": [
+					{ "type": "open_choice_menu", "value": "Ichiro" }
+				]
+			}
+		]
+	},
+
+	"morning_place_lie": {
+		"lines": [
+			{
+				"speaker": "Ichiro",
+				"emotion": "default",
+				"text": "I was in my [type:noun, eng:bedroom, jpn:寝室].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ichiro",
+					  "flag": "schedule.morning.sosuke_thinks_place",
+					  "value": "Grandparents Bedroom"
+					}
+				]
+			}
+		]
+	},
+	"morning_place_truth": {
+		"lines": [
+			{
+				"speaker": "Ichiro",
+				"emotion": "default",
+				"text": "I was in the [type:noun, eng:garden shed, jpn:庭の小屋].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ichiro",
+					  "flag": "schedule.morning.sosuke_thinks_place",
+					  "value": "Garden shed"
+					}
+				]
+			}
+		]
+	},
+	
+	"afternoon_place_lie": {
+		"lines": [
+			{
+				"speaker": "Ichiro",
+				"emotion": "default",
+				"text": "I was in the [type:noun, eng:garage, jpn:ガレージ].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ichiro",
+					  "flag": "schedule.afternoon.sosuke_thinks_place",
+					  "value": "Garage"
+					}
+				]
+			}
+		]
+	},
+	"afternoon_place_truth": {
+		"lines": [
+			{
+				"speaker": "Ichiro",
+				"emotion": "default",
+				"text": "I [type:adverb,eng:really,jpn:本当に] was in the [type:noun, eng:garage, jpn:ガレージ].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ichiro",
+					  "flag": "schedule.afternoon.sosuke_thinks_place",
+					  "value": "Garage"
+					}
+				]
+			}
+		]
+	},
+	
+	"evening_place_truth": {
+		"lines": [
+			{
+				"speaker": "Ichiro",
+				"emotion": "default",
+				"text": "I was in the [type:noun, eng:yard, jpn:庭の小屋].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ichiro",
+					  "flag": "schedule.evening.sosuke_thinks_place",
+					  "value": "Yard"
+					}
+				]
+			}
+		]
+	},
+
+	"grandparents_bedroom_activity_lie": {
+		"lines": [
+			{
+				"speaker": "Ichiro",
+				"emotion": "default",
+				"text": "I was [type:verb, eng:sleeping in, jpn:寝坊していた].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ichiro",
+					  "flag": "schedule.morning.sosuke_thinks_activity",
+					  "value": "Sleeping in"
+					}
+				]
+			}
+		]
+	},
+	"grandparents_bedroom_activity_truth": {
+		"lines": [
+			{
+				"speaker": "Ichiro",
+				"emotion": "default",
+				"text": "I wasn't in the [type:noun, eng:bedroom, jpn:寝室]... Not until right now anyway.",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ichiro",
+					  "flag": "schedule.morning.sosuke_thinks_activity",
+					  "value": "???"
+					}
+				]
+			}
+		]
+	},
+
+	"garden_shed_activity_truth": {
+		"lines": [
+			{
+				"speaker": "Ichiro",
+				"emotion": "thinking",
+				"text": "Well... I was [type:verb, eng:building, jpn:作っていた] my [type:noun,eng:time machine,jpn:タイムマシン].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ichiro",
+					  "flag": "schedule.morning.sosuke_thinks_activity",
+					  "value": "Building a time machine"
+					}
+				]
+			},
+			{
+				"speaker": "Ichiro",
+				"emotion": "default",
+				"text": "It’s almost ready, just missing a few parts."
+			}
+		]
+	},
+
+	"garage_activity_truth": {
+		"lines": [
+			{
+				"speaker": "Ichiro",
+				"emotion": "default",
+				"text": "I was [type:verb, eng:looking, jpn:探していた] for [type:noun,eng:parts,jpn:部品] for my [type:noun,eng:time machine,jpn:タイムマシン]."
+			},
+			{
+				"speaker": "Ichiro",
+				"emotion": "default",
+				"text": "[type:phrase,eng:Hard to find,jpn:見つけにくい] the [type:adjective,eng:right,jpn:正しい] [type:noun,eng:parts,jpn:部品] these days.",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ichiro",
+					  "flag": "schedule.afternoon.sosuke_thinks_activity",
+					  "value": "Looking for machine parts"
+					}
+				]
+			}
+		]
+	},
+	"garage_activity_lie": {
+		"lines": [
+			{
+				"speaker": "Ichiro",
+				"emotion": "default",
+				"text": "I was [type:verb, eng:fixing, jpn:直していた] the [type:noun, eng:lawn mower, jpn:芝刈り機].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ichiro",
+					  "flag": "schedule.afternoon.sosuke_thinks_activity",
+					  "value": "Fixing lawn mower"
+					}
+				]
+			}
+		]
+	},
+
+	"yard_activity_truth": {
+		"lines": [
+			{
+				"speaker": "Ichiro",
+				"emotion": "default",
+				"text": "I was [type:verb, eng:testing, jpn:テストしていた] my [type:noun, eng:time machine, jpn:タイムマシン], but it’s still missing one key part."
+			},
+			{
+				"speaker": "Ichiro",
+				"emotion": "thinking",
+				"text": "If I could fix it, we could go back and stop the [type:noun,eng:cake,jpn:ケーキ] from disappearing!",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ichiro",
+					  "flag": "schedule.evening.sosuke_thinks_activity",
+					  "value": "Testing time machine"
+					}
+				]
+			}
+		]
+	},
+	"yard_activity_lie": {
+		"lines": [
+			{
+				"speaker": "Ichiro",
+				"emotion": "default",
+				"text": "I was [type:verb, eng:mowing, jpn:刈っていた] the [type:noun, eng:lawn, jpn:芝].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ichiro",
+					  "flag": "schedule.evening.sosuke_thinks_activity",
+					  "value": "Mowing the lawn"
+					}
+				]
+			}
+		]
+	},
+
+	"cake_lie": {
+		"lines": [
+			{
+				"speaker": "Ichiro",
+				"emotion": "default",
+				"text": "No, I haven’t seen your [type:noun, eng:cake, jpn:ケーキ] all day."
+			}
+		]
+	},
+	"cake_truth": {
+		"lines": [
+			{
+				"speaker": "Ichiro",
+				"emotion": "thinking",
+				"text": "[type:interjection, eng:No, jpn:いいえ] I didn’t [type:verb, eng:eat, jpn:食べる] it… [type:conjunction, eng:but, jpn:でも] if my [type:noun, eng:time machine, jpn:タイムマシン] [type:verb, eng:worked, jpn:動いた], we could go back and [type:verb, eng:grab, jpn:取る] it before anyone else!",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ichiro",
+					  "flag": "secret_info.sosuke_knows_cake",
+					  "value": true
+					}
+				]
+			},
+			{
+				"speaker": "Ichiro",
+				"emotion": "default",
+				"text": "Help me find the missing parts, and maybe we can do that."
+			}
+		]
+	},
+
+	"reveal_secret": {
+		"lines": [
+			{
+				"speaker": "Ichiro",
+				"emotion": "default",
+				"text": "Alright, Sosuke… I’m [type:verb,eng:building,jpn:作ってる] a [type:noun, eng:time machine, jpn:タイムマシン].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ichiro",
+					  "flag": "secret_info.sosuke_knows_secret",
+					  "value": true
+					}
+				]
+			}
+		]
+	}
+}

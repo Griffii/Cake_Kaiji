@@ -1,9 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://dhs2tppvmsklo"]
+[gd_scene load_steps=7 format=3 uid="uid://dhs2tppvmsklo"]
 
-[ext_resource type="Texture2D" uid="uid://tj6b7sayy6ya" path="res://scenes/rooms/living_room/Living_Room_01.png" id="1_0supr"]
 [ext_resource type="Script" uid="uid://0mos1doed5cg" path="res://scenes/rooms/living_room/living_room.gd" id="1_1f125"]
-[ext_resource type="Texture2D" uid="uid://bg3wrmb5o2mdy" path="res://scenes/characters/Kiyomi/Kiyomi_default.png" id="3_l7vlx"]
-[ext_resource type="Texture2D" uid="uid://cfldljuyvjr30" path="res://scenes/characters/Haruto/Haruto_default.png" id="4_3h1gr"]
+[ext_resource type="Texture2D" uid="uid://dtwyf756q7ril" path="res://scenes/rooms/living_room/LivingRoom_Pixel_01.png" id="2_1f125"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7f87q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l7vlx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3h1gr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5e4dg"]
 
 [node name="Living Room" type="Control"]
 layout_mode = 3
@@ -22,23 +28,27 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0supr")
+texture = ExtResource("2_1f125")
 
-[node name="Grandma" type="TextureButton" parent="."]
+[node name="Grandma" type="Button" parent="."]
 layout_mode = 0
-offset_left = 587.0
-offset_top = 396.0
-offset_right = 843.0
-offset_bottom = 652.0
-texture_normal = ExtResource("3_l7vlx")
+offset_left = 555.0
+offset_top = 308.0
+offset_right = 829.0
+offset_bottom = 782.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7f87q")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_l7vlx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3h1gr")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5e4dg")
 
-[node name="Haruto" type="TextureButton" parent="."]
+[node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1500.0
-offset_top = 521.0
-offset_right = 1741.0
-offset_bottom = 762.0
-texture_normal = ExtResource("4_3h1gr")
-flip_h = true
+offset_left = 55.0
+offset_top = 70.0
+offset_right = 528.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 42
+text = "Tell the truth Grandma"
 
 [connection signal="pressed" from="Grandma" to="." method="_on_grandma_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,55 @@
+{
+	"test_emotions": {
+		"lines": [
+			{
+				"speaker": "Sosuke",
+				"emotion": "default",
+				"text": "Now I am [type:adjective, eng:normal, jpn:普通 ]."
+			},
+			{
+				"speaker": "Sosuke",
+				"emotion": "happy",
+				"text": "Now I am [type:adjective, eng:happy, jpn:嬉しい ]."
+			},
+			{
+				"speaker": "Sosuke",
+				"emotion": "sad",
+				"text": "Now I am [type:adjective, eng:sad, jpn:悲しい ]."
+			},
+			{
+				"speaker": "Sosuke",
+				"emotion": "surprised",
+				"text": "Now I am [type:adjective, eng:surprised, jpn:びっくりされた ]."
+			},
+			{
+				"speaker": "Sosuke",
+				"emotion": "thinking",
+				"text": "Now I am [type:adjective, eng:thinking, jpn:考えている ]."
+			}
+		]
+	},
+	
+	"test_types_of_speech": {
+		"lines": [
+			{
+				"speaker": "Sosuke",
+				"emotion": "happy",
+				"text": "[type:pronoun, eng:I, jpn:私] [type:adverb, eng:really, jpn:本当に] [type:verb, eng:like, jpn:好き] [type:noun, eng:cake, jpn:ケーキ]."
+			},
+			{
+				"speaker": "Sosuke",
+				"emotion": "surprised",
+				"text": "[type:interjection, eng:Wow, jpn:わあ]! That [type:noun, eng:kitchen, jpn:台所] looks [type:adjective, eng:clean, jpn:きれい]!"
+			},
+			{
+				"speaker": "Sosuke",
+				"emotion": "thinking",
+				"text": "[type:phrase, eng:By the way, jpn:ところで], did you [type:verb, eng:see, jpn:見た] [type:pronoun, eng:my, jpn:私の] [type:noun, eng:cake, jpn:ケーキ]?"
+			}
+		]
+	}
+	
+	
+
+	
+}

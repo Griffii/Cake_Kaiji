@@ -1,18 +1,68 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0c24pj2xv4f4"]
+[gd_scene load_steps=15 format=3 uid="uid://c0c24pj2xv4f4"]
 
 [ext_resource type="Script" uid="uid://cixwny0k8r414" path="res://scenes/rooms/sosukes_room/sosukes_room.gd" id="1_4bjod"]
-[ext_resource type="Texture2D" uid="uid://mdk72n0jpkfh" path="res://scenes/rooms/sosukes_room/Sosukes_Room.png" id="2_pkivs"]
+[ext_resource type="Texture2D" uid="uid://bkfi1c064q7nf" path="res://scenes/rooms/sosukes_room/Sosukes Room Pixel 02.png" id="2_pkivs"]
+[ext_resource type="Material" uid="uid://bf8nf8oqdv6dv" path="res://shaders/Glow_Shader.tres" id="3_2ryg8"]
 [ext_resource type="Shader" uid="uid://bbwegyrp2dke3" path="res://shaders/item_glow.gdshader" id="3_pkivs"]
 [ext_resource type="Texture2D" uid="uid://ctwhvvr4wqxnc" path="res://scenes/rooms/sosukes_room/Sosukes_Room_Corkboard.png" id="3_q302u"]
+[ext_resource type="Texture2D" uid="uid://djhucjctdu2ex" path="res://scenes/rooms/sosukes_room/LavaLamp-Sheet-01.png" id="5_q302u"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_q302u"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ryg8"]
+size = Vector2(634, 423)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2ryg8"]
 shader = ExtResource("3_pkivs")
 shader_parameter/glow_enabled = false
 shader_parameter/glow_color = Color(1, 1, 0, 1)
 shader_parameter/glow_size = 25.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ryg8"]
-size = Vector2(634, 423)
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ryg8"]
+atlas = ExtResource("5_q302u")
+region = Rect2(0, 0, 100, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vq566"]
+atlas = ExtResource("5_q302u")
+region = Rect2(100, 0, 100, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtdic"]
+atlas = ExtResource("5_q302u")
+region = Rect2(200, 0, 100, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uiqyg"]
+atlas = ExtResource("5_q302u")
+region = Rect2(300, 0, 100, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmgpi"]
+atlas = ExtResource("5_q302u")
+region = Rect2(0, 0, 100, 115)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_acrf0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ryg8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vq566")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtdic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uiqyg")
+}],
+"loop": true,
+"name": &"Bubble",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmgpi")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Sosukes_Room" type="Control"]
 layout_mode = 3
@@ -35,8 +85,8 @@ texture = ExtResource("2_pkivs")
 
 [node name="Corkboard" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-material = SubResource("ShaderMaterial_q302u")
-position = Vector2(665, 353)
+material = ExtResource("3_2ryg8")
+position = Vector2(592, 395)
 texture = ExtResource("3_q302u")
 
 [node name="Area" type="Area2D" parent="Corkboard"]
@@ -46,5 +96,42 @@ position = Vector2(318, 165)
 position = Vector2(-331, -165.5)
 shape = SubResource("RectangleShape2D_2ryg8")
 
+[node name="LavaLamp" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_2ryg8")
+position = Vector2(931, 736)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_acrf0")
+animation = &"Bubble"
+autoplay = "Bubble"
+frame_progress = 0.76758
+
+[node name="Area2D" type="Area2D" parent="LavaLamp"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LavaLamp/Area2D"]
+polygon = PackedVector2Array(-7, 38, -15, 15.5, -18, 6, -8, -39, -2, -42, 5, -41.5, 7, -38.5, 18, 5, 8, 37.5, 14.5, 40, 6.5, 45, -6.5, 45.5, -15.5, 40.5)
+
+[node name="Test_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1161.0
+offset_top = 359.0
+offset_right = 1241.0
+offset_bottom = 412.0
+theme_override_font_sizes/font_size = 32
+text = "TEST"
+
+[node name="Emotions_Test" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1159.0
+offset_top = 472.0
+offset_right = 1239.0
+offset_bottom = 525.0
+theme_override_font_sizes/font_size = 32
+text = "Emotions Test"
+
 [connection signal="mouse_entered" from="Corkboard/Area" to="." method="_on_corkboard_area_mouse_entered"]
 [connection signal="mouse_exited" from="Corkboard/Area" to="." method="_on_corkboard_area_mouse_exited"]
+[connection signal="mouse_entered" from="LavaLamp/Area2D" to="." method="_on_lamp_area_mouse_entered"]
+[connection signal="mouse_exited" from="LavaLamp/Area2D" to="." method="_on_Lamp_area_mouse_exited"]
+[connection signal="pressed" from="Test_Button" to="." method="_on_test_button_pressed"]
+[connection signal="pressed" from="Emotions_Test" to="." method="_on_emotions_test_btn_pressed"]

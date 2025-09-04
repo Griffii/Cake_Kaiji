@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bf8nf8oqdv6dv"]
+
+[ext_resource type="Shader" uid="uid://bbwegyrp2dke3" path="res://shaders/item_glow.gdshader" id="1_2b1fm"]
+
+[resource]
+shader = ExtResource("1_2b1fm")
+shader_parameter/glow_enabled = false
+shader_parameter/glow_color = Color(1, 1, 0, 1)
+shader_parameter/glow_size = 25.0

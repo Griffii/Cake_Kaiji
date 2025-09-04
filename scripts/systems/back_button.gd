@@ -1,12 +1,16 @@
 extends Button
 
+@export var start_visible : bool = true
 @onready var anim_player = $AnimationPlayer
 
 func _ready() -> void:
 	await get_tree().process_frame # Wait so the button calculates its size after text update
 	pivot_offset = size / 2
 	
-	anim_player.play("appear")
+	if start_visible:
+		anim_player.play("appear")
+	else:
+		visible = false
 
 
 

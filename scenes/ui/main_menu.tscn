@@ -1,13 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://dw37ojf1p0aeg"]
+[gd_scene load_steps=16 format=3 uid="uid://dw37ojf1p0aeg"]
 
 [ext_resource type="Script" uid="uid://8os50x5lui7a" path="res://scripts/systems/main_menu.gd" id="1_sl1te"]
-[ext_resource type="Texture2D" uid="uid://cqixp3lx7shaf" path="res://assets/images/Menu_Background_01.png" id="2_1g8jr"]
 [ext_resource type="FontFile" uid="uid://c2lvtb2jwo8e6" path="res://assets/fonts/BadComic-Regular.ttf" id="2_fe2o3"]
+[ext_resource type="Texture2D" uid="uid://kyyfqkp37wli" path="res://assets/images/logos/Detective_Sosuke_Logo_Black.png" id="3_1g8jr"]
+[ext_resource type="AudioStream" uid="uid://bga6wo3sf1gig" path="res://assets/audio/music/Three Red Hearts - Puzzle Pieces.ogg" id="4_m1kxf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fe2o3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1g8jr"]
-bg_color = Color(1, 0.494799, 0.60493, 1)
+bg_color = Color(1, 0.781812, 0.419151, 1)
 border_width_right = 10
 border_width_bottom = 10
 border_color = Color(1, 0.294118, 0.360784, 1)
@@ -21,7 +22,7 @@ shadow_size = 10
 shadow_offset = Vector2(5, 5)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m1kxf"]
-bg_color = Color(0.999996, 0.180792, 0.459355, 1)
+bg_color = Color(0.864798, 0.608372, 3.85046e-07, 1)
 border_width_left = 10
 border_width_top = 10
 border_width_right = 10
@@ -36,8 +37,8 @@ corner_detail = 10
 shadow_size = 10
 shadow_offset = Vector2(3, 3)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fe2o3"]
-bg_color = Color(1, 0.435294, 0.568627, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wb0q5"]
+bg_color = Color(1, 0.705882, 0, 1)
 border_width_right = 10
 border_width_bottom = 10
 border_color = Color(1, 0.294118, 0.360784, 1)
@@ -51,7 +52,7 @@ shadow_size = 10
 shadow_offset = Vector2(5, 5)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2yvf"]
-bg_color = Color(1, 0.294118, 0.294118, 1)
+bg_color = Color(0.381722, 0.51915, 0.998818, 1)
 border_width_right = 10
 border_width_bottom = 10
 border_color = Color(1, 0.294118, 0.360784, 1)
@@ -65,7 +66,7 @@ shadow_size = 10
 shadow_offset = Vector2(5, 5)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uhagc"]
-bg_color = Color(1, 0.0980392, 0.0980392, 1)
+bg_color = Color(0.172966, 0.182815, 0.989946, 1)
 border_width_left = 10
 border_width_top = 10
 border_width_right = 10
@@ -81,7 +82,7 @@ shadow_size = 10
 shadow_offset = Vector2(3, 3)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btxxm"]
-bg_color = Color(1, 0.196078, 0.196078, 1)
+bg_color = Color(0.239216, 0.352941, 0.996078, 1)
 border_width_right = 10
 border_width_bottom = 10
 border_color = Color(1, 0.294118, 0.360784, 1)
@@ -94,6 +95,70 @@ corner_detail = 10
 shadow_size = 10
 shadow_offset = Vector2(5, 5)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1g8jr"]
+
+[sub_resource type="Animation" id="Animation_x2yvf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Loading_Cover:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Loading_Cover:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_m1kxf"]
+resource_name = "reveal"
+length = 0.7
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Loading_Cover:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Loading_Cover:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uhagc"]
+_data = {
+&"RESET": SubResource("Animation_x2yvf"),
+&"reveal": SubResource("Animation_m1kxf")
+}
+
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -103,18 +168,25 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_sl1te")
 
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 2
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.658824, 0.901961, 0.811765, 1)
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -100.0
+offset_bottom = 100.0
+grow_horizontal = 0
 grow_vertical = 2
-
-[node name="Background" type="TextureRect" parent="MarginContainer"]
-modulate = Color(0.707967, 0.707967, 0.707967, 1)
-layout_mode = 2
-texture = ExtResource("2_1g8jr")
+theme_override_constants/margin_right = 300
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -125,49 +197,145 @@ alignment = 1
 
 [node name="Play_Button" type="Button" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 200)
+custom_minimum_size = Vector2(400, 200)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_colors/font_hover_color = Color(1, 0.960784, 0.882353, 1)
-theme_override_colors/font_outline_color = Color(1, 0.960784, 0.882353, 1)
-theme_override_colors/font_color = Color(0.596078, 1, 0.596078, 1)
-theme_override_colors/font_focus_color = Color(1, 0.960784, 0.882353, 1)
-theme_override_colors/font_pressed_color = Color(1, 0.960784, 0.882353, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("2_fe2o3")
 theme_override_font_sizes/font_size = 128
 theme_override_styles/focus = SubResource("StyleBoxEmpty_fe2o3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1g8jr")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_m1kxf")
-theme_override_styles/normal = SubResource("StyleBoxFlat_fe2o3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wb0q5")
 text = "Play"
 icon_alignment = 1
 
-[node name="Quit_Button" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Settings_Button" type="Button" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
-visible = false
-custom_minimum_size = Vector2(300, 200)
+custom_minimum_size = Vector2(400, 200)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_colors/font_hover_color = Color(1, 0.960784, 0.882353, 1)
-theme_override_colors/font_outline_color = Color(1, 0.960784, 0.882353, 1)
-theme_override_colors/font_color = Color(1, 0.85098, 0.239216, 1)
-theme_override_colors/font_focus_color = Color(1, 0.960784, 0.882353, 1)
-theme_override_colors/font_pressed_color = Color(1, 0.960784, 0.882353, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("2_fe2o3")
-theme_override_font_sizes/font_size = 128
+theme_override_font_sizes/font_size = 86
 theme_override_styles/focus = SubResource("StyleBoxEmpty_fe2o3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_x2yvf")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_uhagc")
 theme_override_styles/normal = SubResource("StyleBoxFlat_btxxm")
-text = "Quit"
+text = "Settings"
 icon_alignment = 1
+
+[node name="Logo_Title" type="Sprite2D" parent="."]
+position = Vector2(564, 439)
+texture = ExtResource("3_1g8jr")
+
+[node name="And The" type="Label" parent="."]
+layout_mode = 0
+offset_left = 680.0
+offset_top = 605.0
+offset_right = 956.0
+offset_bottom = 693.0
+theme_override_colors/font_color = Color(0.230315, 0.230315, 0.230315, 1)
+theme_override_colors/font_shadow_color = Color(0.231373, 0.231373, 0.231373, 0.419608)
+theme_override_colors/font_outline_color = Color(0.231373, 0.231373, 0.231373, 1)
+theme_override_constants/shadow_offset_x = -3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("2_fe2o3")
+theme_override_font_sizes/font_size = 58
+text = "and the"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Missing Cake" type="Label" parent="."]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 666.0
+offset_right = 998.0
+offset_bottom = 821.0
+theme_override_colors/font_color = Color(0, 0, 0.513726, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.623529)
+theme_override_colors/font_outline_color = Color(0, 0, 0.513726, 1)
+theme_override_constants/shadow_offset_x = -5
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_fe2o3")
+theme_override_font_sizes/font_size = 128
+text = "MISSING CAKE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings_Menu" type="Panel" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = 1
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 1669.0
+offset_top = 617.0
+offset_right = 1769.0
+offset_bottom = 717.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1g8jr")
+
+[node name="No_Label" type="Label" parent="Settings_Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_fe2o3")
+theme_override_font_sizes/font_size = 32
+text = "no."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_m1kxf")
+volume_db = -10.0
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+
+[node name="Loading_Cover" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_uhagc")
+}
+autoplay = "reveal"
 
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Play_Button" to="." method="_on_play_button_mouse_entered"]
 [connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Play_Button" to="." method="_on_play_button_mouse_exited"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play_Button" to="." method="_on_play_button_pressed"]
-[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Quit_Button" to="." method="_on_quit_button_mouse_entered"]
-[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Quit_Button" to="." method="_on_quit_button_mouse_exited"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Settings_Button" to="." method="_on_settings_button_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/Settings_Button" to="." method="_on_settings_button_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Settings_Button" to="." method="_on_settings_button_pressed"]

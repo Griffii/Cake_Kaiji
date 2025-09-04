@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccn3ckt6tqbys"
-path="res://.godot/imported/Karin_default.png-0e6ea14b20ef232826ecce33f12ec081.ctex"
+uid="uid://bw0a7eqgrmqpq"
+path="res://.godot/imported/Karin_Default.png-536bd11f7fbd7c4eb4aac10c0d0337d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/characters/Karin/Karin_default.png"
-dest_files=["res://.godot/imported/Karin_default.png-0e6ea14b20ef232826ecce33f12ec081.ctex"]
+source_file="res://scenes/characters/Karin/Karin_Default.png"
+dest_files=["res://.godot/imported/Karin_Default.png-536bd11f7fbd7c4eb4aac10c0d0337d2.ctex"]
 
 [params]
 

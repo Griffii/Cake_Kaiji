@@ -1,0 +1,242 @@
+{
+	"intro": {
+		"lines": [
+			{
+				"speaker": "Ken",
+				"emotion": "default",
+				"text": "[type:interjection, eng:Oh, jpn:ああ], hey [type:proper_noun, eng:Sosuke, jpn:そうすけ]. Everything [type:adjective, eng:okay, jpn:大丈夫]?"
+			}
+		]
+	},
+
+	"question": {
+		"lines": [
+			{
+				"speaker": "Sosuke",
+				"emotion": "default",
+				"text": "I have some [type:noun, eng:questions, jpn:質問] for you.",
+				"actions": [
+					{ "type": "open_choice_menu", "value": "Ken" }
+				]
+			}
+		]
+	},
+
+	"morning_place_truth": {
+		"lines": [
+			{
+				"speaker": "Ken",
+				"emotion": "default",
+				"text": "I was in the [type:noun, eng:kitchen, jpn:台所].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ken",
+					  "flag": "schedule.morning.sosuke_thinks_place",
+					  "value": "Kitchen"
+					}
+				]
+			}
+		]
+	},
+
+	"afternoon_place_truth": {
+		"lines": [
+			{
+				"speaker": "Ken",
+				"emotion": "default",
+				"text": "I was in my [type:noun, eng:office, jpn:書斎].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ken",
+					  "flag": "schedule.afternoon.sosuke_thinks_place",
+					  "value": "Office"
+					}
+				]
+			}
+		]
+	},
+
+	"evening_place_truth": {
+		"lines": [
+			{
+				"speaker": "Ken",
+				"emotion": "default",
+				"text": "I was in the [type:noun, eng:hallway, jpn:廊下].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ken",
+					  "flag": "schedule.evening.sosuke_thinks_place",
+					  "value": "Hallway"
+					}
+				]
+			}
+		]
+	},
+
+	"kitchen_activity_truth": {
+		"lines": [
+			{
+				"speaker": "Ken",
+				"emotion": "default",
+				"text": "I was [type:verb, eng:drinking, jpn:飲んでいた] [type:noun, eng:coffee, jpn:コーヒー] and [type:verb, eng:reading, jpn:読んでいた] the [type:noun, eng:newspaper, jpn:新聞].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ken",
+					  "flag": "schedule.morning.sosuke_thinks_activity",
+					  "value": "Drinking coffee and reading newspaper"
+					}
+				]
+			}
+		]
+	},
+
+	"kitchen_activity_lie": {
+		"lines": [
+			{
+				"speaker": "Ken",
+				"emotion": "default",
+				"text": "I was just [type:verb, eng:cleaning, jpn:片付けていた] the [type:noun, eng:kitchen, jpn:台所].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ken",
+					  "flag": "schedule.morning.sosuke_thinks_activity",
+					  "value": "Cleaning the kitchen"
+					}
+				]
+			}
+		]
+	},
+
+	"office_activity_truth": {
+		"lines": [
+			{
+				"speaker": "Ken",
+				"emotion": "default",
+				"text": "I was [type:verb, eng:watching, jpn:見ていた] the [type:noun, eng:spy cameras, jpn:スパイカメラ].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ken",
+					  "flag": "schedule.afternoon.sosuke_thinks_activity",
+					  "value": "Watching spy cameras"
+					}
+				]
+			}
+		]
+	},
+
+	"office_activity_lie": {
+		"lines": [
+			{
+				"speaker": "Ken",
+				"emotion": "default",
+				"text": "I was [type:verb, eng:doing, jpn:していた] [type:noun, eng:bank work, jpn:銀行の仕事] on my [type:noun, eng:computer, jpn:コンピュータ].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ken",
+					  "flag": "schedule.afternoon.sosuke_thinks_activity",
+					  "value": "Working on the computer"
+					}
+				]
+			}
+		]
+	},
+
+	"hallway_activity_truth": {
+		"lines": [
+			{
+				"speaker": "Ken",
+				"emotion": "default",
+				"text": "I was [type:verb, eng:installing, jpn:取り付けていた] a [type:noun, eng:camera, jpn:カメラ].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ken",
+					  "flag": "schedule.evening.sosuke_thinks_activity",
+					  "value": "Installing a new camera"
+					}
+				]
+			}
+		]
+	},
+
+	"hallway_activity_lie": {
+		"lines": [
+			{
+				"speaker": "Ken",
+				"emotion": "default",
+				"text": "I was [type:verb, eng:fixing, jpn:直していた] a [type:noun, eng:lightbulb, jpn:電球].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ken",
+					  "flag": "schedule.evening.sosuke_thinks_activity",
+					  "value": "Fixing a lightbulb"
+					}
+				]
+			}
+		]
+	},
+
+	"cake_lie": {
+		"lines": [
+			{
+				"speaker": "Ken",
+				"emotion": "default",
+				"text": "I [type:verb, eng:saw, jpn:見た] it in the [type:noun, eng:fridge, jpn:冷蔵庫] in the [type:noun,eng:afternoon,jpn:昼]."
+			}
+		]
+	},
+
+	"cake_truth": {
+		"lines": [
+			{
+				"speaker": "Ken",
+				"emotion": "default",
+				"text": "[type:adverb, eng:Honestly, jpn:正直に] I [type:verb, eng:thought, jpn:思った] it was okay to [type:verb, eng:eat, jpn:食べる]..."
+			},
+			{
+				"speaker": "Ken",
+				"emotion": "default",
+				"text": "It was on the [type:noun, eng:counter, jpn:カウンター], so I [type:verb, eng:had, jpn:食べた] one [type:noun, eng:slice, jpn:一切れ]."
+			},
+			{
+				"speaker": "Ken",
+				"emotion": "default",
+				"text": "There were still two [type:noun, eng:slices, jpn:二切れ] left when I [type:verb, eng:put, jpn:戻した] it back in the [type:noun, eng:fridge, jpn:冷蔵庫].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ken",
+					  "flag": "secret_info.sosuke_knows_cake",
+					  "value": true
+					}
+				]
+			}
+		]
+	},
+
+	"reveal_secret": {
+		"lines": [
+			{
+				"speaker": "Ken",
+				"emotion": "default",
+				"text": "I’ve been [type:verb, eng:building, jpn:作っていた] and [type:verb, eng:testing, jpn:テストしていた] [type:noun, eng:spy equipment, jpn:スパイ道具].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Ken",
+					  "flag": "secret_info.sosuke_knows_secret",
+					  "value": true
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,300 @@
+{
+  "intro": {
+	"lines": [
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "default",
+		"text": "Oh, Sosuke! You look serious. What’s on your mind?"
+	  }
+	]
+  },
+
+  "question": {
+	"lines": [
+	  {
+		"speaker": "Sosuke",
+		"emotion": "default",
+		"text": "I have some [type:noun, eng:questions, jpn:質問] for you.",
+		"actions": [
+		  { "type": "open_choice_menu", "value": "Kiyomi" }
+		]
+	  }
+	]
+  },
+
+  "morning_place_truth": {
+	"lines": [
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "default",
+		"text": "I was in the [type:noun, eng:yard, jpn:庭] [type:phrase, eng:watering flowers, jpn:花に水をやっていた].",
+		"actions": [
+		  {
+			"type": "knowledge_update",
+			"character": "Kiyomi",
+			"flag": "schedule.morning.sosuke_thinks_place",
+			"value": "Yard"
+		  }
+		]
+	  }
+	]
+  },
+
+  "yard_activity_lie": {
+	"lines": [
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "default",
+		"text": "I was [type:phrase, eng:watering flowers, jpn:花に水をやっていた].",
+		"actions": [
+		  {
+			"type": "knowledge_update",
+			"character": "Kiyomi",
+			"flag": "schedule.morning.sosuke_thinks_activity",
+			"value": "Watering flowers"
+		  }
+		]
+	  }
+	]
+  },
+
+  "yard_activity_truth": {
+	"lines": [
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "default",
+		"text": "I was [type:phrase, eng:watering flowers, jpn:花に水をやっていた].",
+		"actions": [
+		  {
+			"type": "knowledge_update",
+			"character": "Kiyomi",
+			"flag": "schedule.morning.sosuke_thinks_activity",
+			"value": "Watering flowers"
+		  }
+		]
+	  },
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "default",
+		"text": "I also needed them for the potion."
+	  }
+	]
+  },
+
+  "afternoon_place_lie": {
+	"lines": [
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "default",
+		"text": "I was in the [type:noun, eng:bathroom, jpn:お風呂場].",
+		"actions": [
+		  {
+			"type": "knowledge_update",
+			"character": "Kiyomi",
+			"flag": "schedule.afternoon.sosuke_thinks_place",
+			"value": "Bathroom"
+		  }
+		]
+	  }
+	]
+  },
+
+  "afternoon_place_truth": {
+	"lines": [
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "thinking",
+		"text": "Well… I started in the [type:noun, eng:kitchen, jpn:台所] to get some [type:noun, eng:ingredients, jpn:材料]."
+	  },
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "default",
+		"text": "Then I went to my [type:noun, eng:room, jpn:部屋] to mix a special [type:noun, eng:potion, jpn:薬]."
+	  },
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "default",
+		"text": "Then I went to the [type:noun, eng:bathroom, jpn:お風呂場].",
+		"actions": [
+		  {
+			"type": "knowledge_update",
+			"character": "Kiyomi",
+			"flag": "schedule.afternoon.sosuke_thinks_place",
+			"value": "Bathroom"
+		  }
+		]
+	  }
+	]
+  },
+
+  "bathroom_activity_lie": {
+	"lines": [
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "default",
+		"text": "I was just [type:phrase, eng:cleaning the bathroom, jpn:お風呂場を掃除していた].",
+		"actions": [
+		  {
+			"type": "knowledge_update",
+			"character": "Kiyomi",
+			"flag": "schedule.afternoon.sosuke_thinks_activity",
+			"value": "Cleaning the bathroom"
+		  }
+		]
+	  }
+	]
+  },
+
+  "bathroom_activity_truth": {
+	"lines": [
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "default",
+		"text": "I was making a [type:phrase, eng:magic toilet cleaner, jpn:魔法のトイレ洗剤]."
+	  },
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "default",
+		"text": "Haru helped me, and he got [type:noun, eng:cake, jpn:ケーキ] on his nose and fingers!"
+	  },
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "default",
+		"text": "Finally, I poured it in the [type:noun, eng:bathroom, jpn:お風呂場]. That’s why it smells so [type:adjective, eng:sweet, jpn:甘い]!"
+	  },
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "thinking",
+		"text": "Don’t worry, it’s safe! Very clean now.",
+		"actions": [
+		  {
+			"type": "knowledge_update",
+			"character": "Kiyomi",
+			"flag": "schedule.afternoon.sosuke_thinks_activity",
+			"value": "Making magic cleaner"
+		  }
+		]
+	  }
+	]
+  },
+
+  "evening_place_truth": {
+	"lines": [
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "default",
+		"text": "I was right here, in the [type:noun, eng:living room, jpn:居間].",
+		"actions": [
+		  {
+			"type": "knowledge_update",
+			"character": "Kiyomi",
+			"flag": "schedule.evening.sosuke_thinks_place",
+			"value": "Living room"
+		  }
+		]
+	  }
+	]
+  },
+
+  "living_room_activity_lie": {
+	"lines": [
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "default",
+		"text": "I was [type:phrase, eng:playing with Haru, jpn:ハルと遊んで] and [type:phrase, eng:drinking tea, jpn:お茶を飲んでいた].",
+		"actions": [
+		  {
+			"type": "knowledge_update",
+			"character": "Kiyomi",
+			"flag": "schedule.evening.sosuke_thinks_activity",
+			"value": "Playing with Haru and drinking tea"
+		  }
+		]
+	  }
+	]
+  },
+
+  "living_room_activity_truth": {
+	"lines": [
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "default",
+		"text": "I was [type:phrase, eng:playing with Haru and drinking tea, jpn:ハルと遊んでお茶を飲んでいた].",
+		"actions": [
+		  {
+			"type": "knowledge_update",
+			"character": "Kiyomi",
+			"flag": "schedule.evening.sosuke_thinks_activity",
+			"value": "Playing with Haru and drinking tea"
+		  }
+		]
+	  },
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "sad",
+		"text": "I'm [type:adjective, eng:sorry, jpn:ごめん] about your cake dear."
+	  }
+	]
+  },
+
+  "cake_lie": {
+	"lines": [
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "default",
+		"text": "There should be more in the [type:noun, eng:fridge, jpn:冷蔵庫]."
+	  },
+	  {
+		"speaker": "Sosuke",
+		"emotion": "default",
+		"text": "It’s all gone!"
+	  },
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "thinking",
+		"text": "Oh no… I don’t know what happened to the last two slices."
+	  }
+	]
+  },
+
+  "cake_truth": {
+	"lines": [
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "default",
+		"text": "I only took one slice for my [type:phrase, eng:magic toilet cleaner, jpn:魔法のトイレ洗剤]."
+	  },
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "default",
+		"text": "There were still [type:noun, eng:two slices, jpn:二切れ] left when I was done!",
+		"actions": [
+		  {
+			"type": "knowledge_update",
+			"character": "Kiyomi",
+			"flag": "secret_info.sosuke_knows_cake",
+			"value": true
+		  }
+		]
+	  }
+	]
+  },
+
+  "reveal_secret": {
+	"lines": [
+	  {
+		"speaker": "Kiyomi",
+		"emotion": "default",
+		"text": "Alright… I’m a [type:noun, eng:witch, jpn:魔女], Sosuke.",
+		"actions": [
+		  {
+			"type": "knowledge_update",
+			"character": "Kiyomi",
+			"flag": "secret_info.sosuke_knows_secret",
+			"value": true
+		  }
+		]
+	  }
+	]
+  }
+}

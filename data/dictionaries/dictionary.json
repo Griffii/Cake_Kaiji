@@ -1,0 +1,1811 @@
+[
+  {
+	"id": "3_barrels_of_apple_juice",
+	"en": "3 barrels of apple juice",
+	"ja_kanji": "リンゴジュースを3樽",
+	"ja_kana": "りんごじゅーすを3",
+	"romaji": "",
+	"pos": "phrase",
+	"ja_expl": "表現。決まった言い回し。",
+	"examples": [
+	  {
+		"en": "3 barrels of apple juice",
+		"ja": "リンゴジュースを3樽"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "afternoon",
+	"en": "afternoon",
+	"ja_kanji": "昼",
+	"ja_kana": "",
+	"romaji": "",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "afternoon",
+		"ja": "昼"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "午後"
+	]
+  },
+  {
+	"id": "and_then",
+	"en": "and then",
+	"ja_kanji": "",
+	"ja_kana": "そして",
+	"romaji": "soshite",
+	"pos": "conjunction",
+	"ja_expl": "接続詞。語・句・節・文をつなぐ語。",
+	"examples": [
+	  {
+		"en": "and then",
+		"ja": "ソシテ"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "ソシテ"
+	]
+  },
+  {
+	"id": "bank_work",
+	"en": "bank work",
+	"ja_kanji": "銀行の仕事",
+	"ja_kana": "の",
+	"romaji": "no",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "bank work",
+		"ja": "銀行の仕事"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "bathroom",
+	"en": "bathroom",
+	"ja_kanji": "お風呂場",
+	"ja_kana": "おふろば",
+	"romaji": "ofuroba",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "bathroom",
+		"ja": "お風呂場"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "bedroom",
+	"en": "bedroom",
+	"ja_kanji": "寝室",
+	"ja_kana": "",
+	"romaji": "",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "bedroom",
+		"ja": "寝室"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "building",
+	"en": "building",
+	"ja_kanji": "作ってる",
+	"ja_kana": "ってる",
+	"romaji": "tteru",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "building",
+		"ja": "作ってる"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "作っていた"
+	]
+  },
+  {
+	"id": "but",
+	"en": "but",
+	"ja_kanji": "",
+	"ja_kana": "でも",
+	"romaji": "demo",
+	"pos": "conjunction",
+	"ja_expl": "接続詞。語・句・節・文をつなぐ語。",
+	"examples": [
+	  {
+		"en": "but",
+		"ja": "デモ"
+	  }
+	],
+	"eng_aliases": [
+	  "But"
+	],
+	"jpn_aliases": [
+	  "デモ"
+	]
+  },
+  {
+	"id": "cake",
+	"en": "cake",
+	"ja_kanji": "",
+	"ja_kana": "けーき",
+	"romaji": "keeki",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "cake",
+		"ja": "ケーキ"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "ケーキ"
+	]
+  },
+  {
+	"id": "camera",
+	"en": "camera",
+	"ja_kanji": "",
+	"ja_kana": "カメラ",
+	"romaji": "kamera",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "camera",
+		"ja": "カメラ"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "カメラ"
+	]
+  },
+  {
+	"id": "cleaning",
+	"en": "cleaning",
+	"ja_kanji": "片付けていた",
+	"ja_kana": "けていた",
+	"romaji": "keteita",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "cleaning",
+		"ja": "片付けていた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "cleaning_the_bathroom",
+	"en": "cleaning the bathroom",
+	"ja_kanji": "お風呂場を掃除していた",
+	"ja_kana": "おふろばをしていた",
+	"romaji": "ofurobaoshiteita",
+	"pos": "phrase",
+	"ja_expl": "表現。決まった言い回し。",
+	"examples": [
+	  {
+		"en": "cleaning the bathroom",
+		"ja": "お風呂場を掃除していた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "cleaning_up",
+	"en": "cleaning up",
+	"ja_kanji": "片付けていた",
+	"ja_kana": "けていた",
+	"romaji": "keteita",
+	"pos": "phrase",
+	"ja_expl": "表現。決まった言い回し。",
+	"examples": [
+	  {
+		"en": "cleaning up",
+		"ja": "片付けていた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "coffee",
+	"en": "coffee",
+	"ja_kanji": "",
+	"ja_kana": "こーひー",
+	"romaji": "koohii",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "coffee",
+		"ja": "コーヒー"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "コーヒー"
+	]
+  },
+  {
+	"id": "computer",
+	"en": "computer",
+	"ja_kanji": "",
+	"ja_kana": "こんぴゅーた",
+	"romaji": "konpyuuta",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "computer",
+		"ja": "コンピュータ"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "コンピュータ"
+	]
+  },
+  {
+	"id": "counter",
+	"en": "counter",
+	"ja_kanji": "",
+	"ja_kana": "かうんたー",
+	"romaji": "kauntaa",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "counter",
+		"ja": "カウンター"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "カウンター"
+	]
+  },
+  {
+	"id": "deal_with_the_raccoons",
+	"en": "deal with the raccoons",
+	"ja_kanji": "アライグマと取引していた",
+	"ja_kana": "あらいぐまとしていた",
+	"romaji": "araigumatoshiteita",
+	"pos": "phrase",
+	"ja_expl": "表現。決まった言い回し。",
+	"examples": [
+	  {
+		"en": "deal with the raccoons",
+		"ja": "アライグマと取引していた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "doing",
+	"en": "doing",
+	"ja_kanji": "",
+	"ja_kana": "していた",
+	"romaji": "shiteita",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "doing",
+		"ja": "シテイタ"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "シテイタ"
+	]
+  },
+  {
+	"id": "doing_laundry",
+	"en": "doing laundry",
+	"ja_kanji": "洗濯をしていた",
+	"ja_kana": "をしていた",
+	"romaji": "oshiteita",
+	"pos": "phrase",
+	"ja_expl": "表現。決まった言い回し。",
+	"examples": [
+	  {
+		"en": "doing laundry",
+		"ja": "洗濯をしていた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "drinking",
+	"en": "drinking",
+	"ja_kanji": "飲んでいた",
+	"ja_kana": "んでいた",
+	"romaji": "ndeita",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "drinking",
+		"ja": "飲んでいた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "drying_the_laundry",
+	"en": "drying the laundry",
+	"ja_kanji": "洗濯物を干していた",
+	"ja_kana": "をしていた",
+	"romaji": "oshiteita",
+	"pos": "phrase",
+	"ja_expl": "表現。決まった言い回し。",
+	"examples": [
+	  {
+		"en": "drying the laundry",
+		"ja": "洗濯物を干していた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "eat",
+	"en": "eat",
+	"ja_kanji": "食べる",
+	"ja_kana": "べる",
+	"romaji": "beru",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "eat",
+		"ja": "食べる"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "fixing",
+	"en": "fixing",
+	"ja_kanji": "直していた",
+	"ja_kana": "していた",
+	"romaji": "shiteita",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "fixing",
+		"ja": "直していた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "forgot",
+	"en": "forgot",
+	"ja_kanji": "忘れた",
+	"ja_kana": "れた",
+	"romaji": "reta",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "forgot",
+		"ja": "忘れた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "fridge",
+	"en": "fridge",
+	"ja_kanji": "冷蔵庫",
+	"ja_kana": "れいぞうこ",
+	"romaji": "reizouko",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "fridge",
+		"ja": "冷蔵庫"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "garage",
+	"en": "garage",
+	"ja_kanji": "",
+	"ja_kana": "がれーじ",
+	"romaji": "gareeji",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "garage",
+		"ja": "ガレージ"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "ガレージ"
+	]
+  },
+  {
+	"id": "garden_shed",
+	"en": "garden shed",
+	"ja_kanji": "庭の小屋",
+	"ja_kana": "にわの",
+	"romaji": "niwano",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "garden shed",
+		"ja": "庭の小屋"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "get_out",
+	"en": "Get out",
+	"ja_kanji": "出て",
+	"ja_kana": "でて",
+	"romaji": "dete",
+	"pos": "phrase",
+	"ja_expl": "表現。決まった言い回し。",
+	"examples": [
+	  {
+		"en": "Get out",
+		"ja": "出て"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "getting_extra_apples_from_the_fridge",
+	"en": "getting extra apples from the fridge",
+	"ja_kanji": "冷蔵庫から追加のリンゴを取っていた",
+	"ja_kana": "れいぞうこからのりんごをっていた",
+	"romaji": "reizoukokaranoringootteita",
+	"pos": "phrase",
+	"ja_expl": "表現。決まった言い回し。",
+	"examples": [
+	  {
+		"en": "getting extra apples from the fridge",
+		"ja": "冷蔵庫から追加のリンゴを取っていた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "gone",
+	"en": "gone",
+	"ja_kanji": "",
+	"ja_kana": "なくなった",
+	"romaji": "nakunatta",
+	"pos": "adjective",
+	"ja_expl": "形容詞。性質や状態を表す語。",
+	"examples": [
+	  {
+		"en": "gone",
+		"ja": "ナクナッタ"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "ナクナッタ"
+	]
+  },
+  {
+	"id": "grab",
+	"en": "grab",
+	"ja_kanji": "取る",
+	"ja_kana": "る",
+	"romaji": "ru",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "grab",
+		"ja": "取る"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "had",
+	"en": "had",
+	"ja_kanji": "食べた",
+	"ja_kana": "べた",
+	"romaji": "beta",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "had",
+		"ja": "食べた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "hallway",
+	"en": "hallway",
+	"ja_kanji": "廊下",
+	"ja_kana": "",
+	"romaji": "",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "hallway",
+		"ja": "廊下"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "hard_to_find",
+	"en": "Hard to find",
+	"ja_kanji": "見つけにくい",
+	"ja_kana": "つけにくい",
+	"romaji": "tsukenikui",
+	"pos": "phrase",
+	"ja_expl": "表現。決まった言い回し。",
+	"examples": [
+	  {
+		"en": "Hard to find",
+		"ja": "見つけにくい"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "hello",
+	"en": "Hello",
+	"ja_kanji": "",
+	"ja_kana": "こんにちは",
+	"romaji": "konichiha",
+	"pos": "interjection",
+	"ja_expl": "感動詞。感情や呼びかけを表す語。",
+	"examples": [
+	  {
+		"en": "Hello",
+		"ja": "コンニチハ"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "コンニチハ"
+	]
+  },
+  {
+	"id": "honestly",
+	"en": "Honestly",
+	"ja_kanji": "正直に",
+	"ja_kana": "に",
+	"romaji": "ni",
+	"pos": "adverb",
+	"ja_expl": "副詞。程度・様子・時間などを修飾する語。",
+	"examples": [
+	  {
+		"en": "Honestly",
+		"ja": "正直に"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "hurry",
+	"en": "hurry",
+	"ja_kanji": "急ぎ",
+	"ja_kana": "ぎ",
+	"romaji": "gi",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "hurry",
+		"ja": "急ぎ"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "ingredients",
+	"en": "ingredients",
+	"ja_kanji": "材料",
+	"ja_kana": "ざいりょう",
+	"romaji": "zairyou",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "ingredients",
+		"ja": "材料"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "installing",
+	"en": "installing",
+	"ja_kanji": "取り付けていた",
+	"ja_kana": "りけていた",
+	"romaji": "riketeita",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "installing",
+		"ja": "取り付けていた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "kitchen",
+	"en": "kitchen",
+	"ja_kanji": "台所",
+	"ja_kana": "だいどころ",
+	"romaji": "daidokoro",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "kitchen",
+		"ja": "台所"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "laundry_room",
+	"en": "laundry room",
+	"ja_kanji": "洗濯室",
+	"ja_kana": "",
+	"romaji": "",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "laundry room",
+		"ja": "洗濯室"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "lawn",
+	"en": "lawn",
+	"ja_kanji": "芝",
+	"ja_kana": "",
+	"romaji": "",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "lawn",
+		"ja": "芝"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "lawn_mower",
+	"en": "lawn mower",
+	"ja_kanji": "芝刈り機",
+	"ja_kana": "り",
+	"romaji": "ri",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "lawn mower",
+		"ja": "芝刈り機"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "lightbulb",
+	"en": "lightbulb",
+	"ja_kanji": "電球",
+	"ja_kana": "",
+	"romaji": "",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "lightbulb",
+		"ja": "電球"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+{
+  "id": "like",
+  "en": "like",
+  "ja_kanji": "好き",
+  "ja_kana": "すき",
+  "romaji": "suki",
+  "pos": "verb",
+  "ja_expl": "好意や好みを持つこと。（日本語では形容動詞「好き」を用いることが多い）",
+  "examples": [
+	{ "en": "I like cake.", "ja": "私はケーキが好きだ。" }
+  ],
+  "eng_aliases": ["likes", "liked", "liking"],
+  "jpn_aliases": ["好む"]
+},
+
+  {
+	"id": "living_room",
+	"en": "living room",
+	"ja_kanji": "居間",
+	"ja_kana": "いま",
+	"romaji": "ima",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "living room",
+		"ja": "居間"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "looking",
+	"en": "looking",
+	"ja_kanji": "探していた",
+	"ja_kana": "していた",
+	"romaji": "shiteita",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "looking",
+		"ja": "探していた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "magic_toilet_cleaner",
+	"en": "magic toilet cleaner",
+	"ja_kanji": "魔法のトイレ洗剤",
+	"ja_kana": "まほうのトイレせんざい",
+	"romaji": "mahounotoiresenzai",
+	"pos": "phrase",
+	"ja_expl": "表現。決まった言い回し。",
+	"examples": [
+	  {
+		"en": "magic toilet cleaner",
+		"ja": "魔法のトイレ洗剤"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "making_breakfast",
+	"en": "making breakfast",
+	"ja_kanji": "朝ごはんを作っている",
+	"ja_kana": "あさごはんをつくっている",
+	"romaji": "",
+	"pos": "phrase",
+	"ja_expl": "表現。決まった言い回し。",
+	"examples": [
+	  {
+		"en": "making breakfast",
+		"ja": "朝ごはんを作っていた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "mall",
+	"en": "mall",
+	"ja_kanji": "",
+	"ja_kana": "しょっぴんぐもーる",
+	"romaji": "shoppingumooru",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "mall",
+		"ja": "ショッピングモール"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "ショッピングモール"
+	]
+  },
+  {
+	"id": "morning",
+	"en": "morning",
+	"ja_kanji": "朝",
+	"ja_kana": "",
+	"romaji": "",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "morning",
+		"ja": "朝"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "mowing",
+	"en": "mowing",
+	"ja_kanji": "刈っていた",
+	"ja_kana": "っていた",
+	"romaji": "tteita",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "mowing",
+		"ja": "刈っていた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "need",
+	"en": "need",
+	"ja_kanji": "必要",
+	"ja_kana": "",
+	"romaji": "",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "need",
+		"ja": "必要"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "newspaper",
+	"en": "newspaper",
+	"ja_kanji": "新聞",
+	"ja_kana": "",
+	"romaji": "",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "newspaper",
+		"ja": "新聞"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "no",
+	"en": "No",
+	"ja_kanji": "",
+	"ja_kana": "いいえ",
+	"romaji": "iie",
+	"pos": "interjection",
+	"ja_expl": "感動詞。感情や呼びかけを表す語。",
+	"examples": [
+	  {
+		"en": "No",
+		"ja": "イイエ"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "イイエ"
+	]
+  },
+  {
+	"id": "none_of_your_business",
+	"en": "None of your business",
+	"ja_kanji": "大きなお世話",
+	"ja_kana": "きなお",
+	"romaji": "kinao",
+	"pos": "phrase",
+	"ja_expl": "表現。決まった言い回し。",
+	"examples": [
+	  {
+		"en": "None of your business",
+		"ja": "大きなお世話"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "now",
+	"en": "Now",
+	"ja_kanji": "今",
+	"ja_kana": "いま",
+	"romaji": "ima",
+	"pos": "adverb",
+	"ja_expl": "副詞。程度・様子・時間などを修飾する語。",
+	"examples": [
+	  {
+		"en": "Now",
+		"ja": "今"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "now_that_i_think_about_it",
+	"en": "Now that I think about it",
+	"ja_kanji": "今思えば",
+	"ja_kana": "いまえば",
+	"romaji": "imaeba",
+	"pos": "phrase",
+	"ja_expl": "表現。決まった言い回し。",
+	"examples": [
+	  {
+		"en": "Now that I think about it",
+		"ja": "今思えば"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "office",
+	"en": "office",
+	"ja_kanji": "書斎",
+	"ja_kana": "",
+	"romaji": "",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "office",
+		"ja": "書斎"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "oh",
+	"en": "Oh",
+	"ja_kanji": "",
+	"ja_kana": "ああ",
+	"romaji": "aa",
+	"pos": "interjection",
+	"ja_expl": "感動詞。感情や呼びかけを表す語。",
+	"examples": [
+	  {
+		"en": "Oh",
+		"ja": "アア"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "アア"
+	]
+  },
+  {
+	"id": "okay",
+	"en": "okay",
+	"ja_kanji": "大丈夫",
+	"ja_kana": "",
+	"romaji": "",
+	"pos": "adjective",
+	"ja_expl": "形容詞。性質や状態を表す語。",
+	"examples": [
+	  {
+		"en": "okay",
+		"ja": "大丈夫"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "parts",
+	"en": "parts",
+	"ja_kanji": "部品",
+	"ja_kana": "",
+	"romaji": "",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "parts",
+		"ja": "部品"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "peaceful",
+	"en": "peaceful",
+	"ja_kanji": "平和",
+	"ja_kana": "",
+	"romaji": "",
+	"pos": "adjective",
+	"ja_expl": "形容詞。性質や状態を表す語。",
+	"examples": [
+	  {
+		"en": "peaceful",
+		"ja": "平和"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "picking_apples",
+	"en": "picking apples",
+	"ja_kanji": "リンゴを取っていた",
+	"ja_kana": "りんごをっていた",
+	"romaji": "ringootteita",
+	"pos": "phrase",
+	"ja_expl": "表現。決まった言い回し。",
+	"examples": [
+	  {
+		"en": "picking apples",
+		"ja": "リンゴを取っていた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "playing_with_haru",
+	"en": "playing with Haru",
+	"ja_kanji": "ハルと遊んで",
+	"ja_kana": "はるとあそんで",
+	"romaji": "harutoasonde",
+	"pos": "phrase",
+	"ja_expl": "表現。決まった言い回し。",
+	"examples": [
+	  { "en": "playing with Haru", "ja": "ハルと遊んで" }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "drinking_tea",
+	"en": "drinking tea",
+	"ja_kanji": "お茶を飲んでいた",
+	"ja_kana": "おちゃをのんでいた",
+	"romaji": "ochaonondeita",
+	"pos": "phrase",
+	"ja_expl": "表現。決まった言い回し。",
+	"examples": [
+	  { "en": "drinking tea", "ja": "お茶を飲んでいた" }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "potion",
+	"en": "potion",
+	"ja_kanji": "薬",
+	"ja_kana": "くすり",
+	"romaji": "kusuri",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "potion",
+		"ja": "薬"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "promise",
+	"en": "promise",
+	"ja_kanji": "約束する",
+	"ja_kana": "する",
+	"romaji": "suru",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "promise",
+		"ja": "約束する"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "put",
+	"en": "put",
+	"ja_kanji": "戻した",
+	"ja_kana": "した",
+	"romaji": "shita",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "put",
+		"ja": "戻した"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+  "id": "questions",
+  "en": "questions",
+  "ja_kanji": "質問",
+  "ja_kana": "しつもん",
+  "romaji": "shitsumon",
+  "pos": "noun",
+  "ja_expl": "物事について相手に答えや説明を求めてたずねること。また、そのたずねる内容や問い。英語の“questions”は複数形だが、日本語では数にかかわらず「質問」を用いる。",
+  "examples": [
+	{
+	  "en": "Do you have any questions about the homework?",
+	  "ja": "宿題について質問はありますか。"
+	},
+	{
+	  "en": "She asked three questions during the meeting.",
+	  "ja": "彼女は会議中に三つ質問をしました。"
+	},
+	{
+	  "en": "Please save your questions until the end.",
+	  "ja": "質問は最後まで取っておいてください。"
+	}
+  ],
+  "eng_aliases": [
+	"question",
+	"questions",
+	"query",
+	"queries",
+	"inquiry",
+	"inquiries",
+	"interrogation",
+	"prompt",
+	"issue",
+	"problem (exam)"
+  ],
+  "jpn_aliases": [
+	"ご質問",
+	"疑問",
+	"疑問点",
+	"問い",
+	"問いかけ",
+	"質疑",
+	"問い合わせ",
+	"質問事項",
+	"しつもん"
+  ]
+},
+  {
+	"id": "raccoons",
+	"en": "raccoons",
+	"ja_kanji": "",
+	"ja_kana": "たぬき",
+	"romaji": "tanuki",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "raccoons",
+		"ja": "タヌキ"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "タヌキ"
+	]
+  },
+  {
+	"id": "reading",
+	"en": "reading",
+	"ja_kanji": "読んでいた",
+	"ja_kana": "んでいた",
+	"romaji": "ndeita",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "reading",
+		"ja": "読んでいた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "really",
+	"en": "really",
+	"ja_kanji": "本当に",
+	"ja_kana": "に",
+	"romaji": "ni",
+	"pos": "adverb",
+	"ja_expl": "副詞。程度・様子・時間などを修飾する語。",
+	"examples": [
+	  {
+		"en": "really",
+		"ja": "本当に"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "right",
+	"en": "right",
+	"ja_kanji": "正しい",
+	"ja_kana": "しい",
+	"romaji": "shii",
+	"pos": "adjective",
+	"ja_expl": "形容詞。性質や状態を表す語。",
+	"examples": [
+	  {
+		"en": "right",
+		"ja": "正しい"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "room",
+	"en": "room",
+	"ja_kanji": "部屋",
+	"ja_kana": "へや",
+	"romaji": "heya",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "room",
+		"ja": "部屋"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "rude",
+	"en": "rude",
+	"ja_kanji": "失礼",
+	"ja_kana": "しつれい",
+	"romaji": "shitsurei",
+	"pos": "adjective",
+	"ja_expl": "形容詞。性質や状態を表す語。",
+	"examples": [
+	  {
+		"en": "rude",
+		"ja": "失礼"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "saw",
+	"en": "saw",
+	"ja_kanji": "見た",
+	"ja_kana": "た",
+	"romaji": "ta",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "saw",
+		"ja": "見た"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "secret",
+	"en": "secret",
+	"ja_kanji": "秘密",
+	"ja_kana": "ひみつ",
+	"romaji": "himitsu",
+	"pos": "adjective",
+	"ja_expl": "形容詞。性質や状態を表す語。",
+	"examples": [
+	  {
+		"en": "secret",
+		"ja": "秘密"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "秘密の"
+	]
+  },
+  {
+	"id": "sleeping_in",
+	"en": "sleeping in",
+	"ja_kanji": "寝坊していた",
+	"ja_kana": "していた",
+	"romaji": "shiteita",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "sleeping in",
+		"ja": "寝坊していた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "slice",
+	"en": "slice",
+	"ja_kanji": "一切れ",
+	"ja_kana": "れ",
+	"romaji": "re",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "slice",
+		"ja": "一切れ"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "slices",
+	"en": "slices",
+	"ja_kanji": "二切れ",
+	"ja_kana": "ふたきれ",
+	"romaji": "futakire",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "slices",
+		"ja": "二切れ"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "something",
+	"en": "something",
+	"ja_kanji": "何か",
+	"ja_kana": "か",
+	"romaji": "ka",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "something",
+		"ja": "何か"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "sorry",
+	"en": "sorry",
+	"ja_kanji": "",
+	"ja_kana": "ごめん",
+	"romaji": "gomen",
+	"pos": "adjective",
+	"ja_expl": "形容詞。性質や状態を表す語。",
+	"examples": [
+	  {
+		"en": "sorry",
+		"ja": "ゴメン"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "ゴメン"
+	]
+  },
+  {
+	"id": "sosuke",
+	"en": "Sosuke",
+	"ja_kanji": "",
+	"ja_kana": "そうすけ",
+	"romaji": "sousuke",
+	"pos": "proper_noun",
+	"ja_expl": "語。基本語彙。",
+	"examples": [
+	  {
+		"en": "Sosuke",
+		"ja": "ソウスケ"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "ソウスケ"
+	]
+  },
+  {
+	"id": "spy_cameras",
+	"en": "spy cameras",
+	"ja_kanji": "",
+	"ja_kana": "スパイカメラ",
+	"romaji": "supaikamera",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "spy cameras",
+		"ja": "スパイカメラ"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "スパイカメラ"
+	]
+  },
+  {
+	"id": "spy_equipment",
+	"en": "spy equipment",
+	"ja_kanji": "スパイ道具",
+	"ja_kana": "すぱい",
+	"romaji": "supai",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "spy equipment",
+		"ja": "スパイ道具"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "startled",
+	"en": "startled",
+	"ja_kanji": "",
+	"ja_kana": "びっくりさせた",
+	"romaji": "bikkurisaseta",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "startled",
+		"ja": "ビックリサセタ"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "ビックリサセタ"
+	]
+  },
+  {
+	"id": "sweet",
+	"en": "sweet",
+	"ja_kanji": "甘い",
+	"ja_kana": "あまい",
+	"romaji": "amai",
+	"pos": "adjective",
+	"ja_expl": "形容詞。性質や状態を表す語。",
+	"examples": [
+	  {
+		"en": "sweet",
+		"ja": "甘い"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "tell",
+	"en": "tell",
+	"ja_kanji": "教えて",
+	"ja_kana": "おしえて",
+	"romaji": "oshiete",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "tell",
+		"ja": "教えて"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "testing",
+	"en": "testing",
+	"ja_kanji": "",
+	"ja_kana": "テストしていた",
+	"romaji": "tesutoshiteita",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "testing",
+		"ja": "テストシテイタ"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "テストシテイタ"
+	]
+  },
+  {
+	"id": "thought",
+	"en": "thought",
+	"ja_kanji": "思った",
+	"ja_kana": "った",
+	"romaji": "tta",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "thought",
+		"ja": "思った"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "time_machine",
+	"en": "time machine",
+	"ja_kanji": "",
+	"ja_kana": "タイムマシン",
+	"romaji": "taimumashin",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "time machine",
+		"ja": "タイムマシン"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "タイムマシン"
+	]
+  },
+  {
+	"id": "took_your_cake_out_of_the_fridge",
+	"en": "took your cake out of the fridge",
+	"ja_kanji": "ケーキを冷蔵庫から出した",
+	"ja_kana": "けーきをれいぞうこからした",
+	"romaji": "keekioreizoukokarashita",
+	"pos": "phrase",
+	"ja_expl": "表現。決まった言い回し。",
+	"examples": [
+	  {
+		"en": "took your cake out of the fridge",
+		"ja": "ケーキを冷蔵庫から出した"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "trading",
+	"en": "trading",
+	"ja_kanji": "取引していた",
+	"ja_kana": "していた",
+	"romaji": "shiteita",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "trading",
+		"ja": "取引していた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "two_slices",
+	"en": "two slices",
+	"ja_kanji": "二切れ",
+	"ja_kana": "ふたきれ",
+	"romaji": "futakire",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "two slices",
+		"ja": "二切れ"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "watching",
+	"en": "watching",
+	"ja_kanji": "見ていた",
+	"ja_kana": "ていた",
+	"romaji": "teita",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "watching",
+		"ja": "見ていた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "watering_flowers",
+	"en": "watering flowers",
+	"ja_kanji": "花に水をやっていた",
+	"ja_kana": "はなにみずをやっていた",
+	"romaji": "hananimizuoyatteita",
+	"pos": "phrase",
+	"ja_expl": "表現。決まった言い回し。",
+	"examples": [
+	  {
+		"en": "watering flowers",
+		"ja": "花に水をやっていた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "what_are_you_doing",
+	"en": "what are you doing",
+	"ja_kanji": "何しているの",
+	"ja_kana": "しているの",
+	"romaji": "shiteiruno",
+	"pos": "phrase",
+	"ja_expl": "表現。決まった言い回し。",
+	"examples": [
+	  {
+		"en": "what are you doing",
+		"ja": "何しているの"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "witch",
+	"en": "witch",
+	"ja_kanji": "魔女",
+	"ja_kana": "まじょ",
+	"romaji": "majo",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "witch",
+		"ja": "魔女"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "with",
+	"en": "with",
+	"ja_kanji": "",
+	"ja_kana": "と",
+	"romaji": "to",
+	"pos": "preposition",
+	"ja_expl": "前置詞。名詞の前に置き関係を示す語。",
+	"examples": [
+	  {
+		"en": "with",
+		"ja": "ト"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "ト"
+	]
+  },
+  {
+	"id": "worked",
+	"en": "worked",
+	"ja_kanji": "動いた",
+	"ja_kana": "いた",
+	"romaji": "ita",
+	"pos": "verb",
+	"ja_expl": "動詞。動作や状態を表す語。",
+	"examples": [
+	  {
+		"en": "worked",
+		"ja": "動いた"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": []
+  },
+  {
+	"id": "yard",
+	"en": "yard",
+	"ja_kanji": "庭",
+	"ja_kana": "にわ",
+	"romaji": "niwa",
+	"pos": "noun",
+	"ja_expl": "名詞。物・人・場所などを表す語。",
+	"examples": [
+	  {
+		"en": "yard",
+		"ja": "庭"
+	  }
+	],
+	"eng_aliases": [],
+	"jpn_aliases": [
+	  "庭の小屋"
+	]
+  }
+]

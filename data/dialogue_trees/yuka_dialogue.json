@@ -1,0 +1,291 @@
+{
+  "yuka_room_first_visit": {
+	"lines": [
+	  {
+		"speaker": "Sosuke",
+		"emotion": "default",
+		"text": "Hey Yuka, [type:phrase, eng:what are you doing, jpn:何しているの]?"
+	  },
+	  {
+		"speaker": "Yuka",
+		"emotion": "default",
+		"text": "[type:phrase, eng:None of your business, jpn:大きなお世話]."
+	  },
+	  {
+		"speaker": "Sosuke",
+		"emotion": "default",
+		"text": "Come on, just [type:verb, eng:tell, jpn:教えて] me!"
+	  },
+	  {
+		"speaker": "Yuka",
+		"emotion": "default",
+		"text": "[type:phrase, eng:Get out, jpn:出て] of my room. [pause:0.3][speed:slow][type:adverb, eng:Now, jpn:今]."
+	  },
+	  {
+		"speaker": "",
+		"emotion": "",
+		"text": "",
+		"actions": [
+		  { "type": "sound", "value": "environment/Door_Slam_01.mp3" },
+		  { "type": "change_scene", "value": "hallway" }
+		]
+	  },
+	  {
+		"speaker": "Sosuke",
+		"emotion": "default",
+		"text": "How [type:adjective, eng:rude, jpn:失礼]..."
+	  }
+	]
+  },
+
+  "yuka_room_kicked_out": {
+	"lines": [
+	  {
+		"speaker": "Yuka",
+		"emotion": "default",
+		"text": "[type:phrase, eng:Get out, jpn:出て]!"
+	  },
+	  {
+		"speaker": "Sosuke",
+		"emotion": "default",
+		"text": "...",
+		"actions": [
+		  { "type": "sound", "value": "environment/Door_Slam_01.mp3" },
+		  { "type": "change_scene", "value": "hallway" }
+		]
+	  }
+	]
+  },
+
+  "yuka_room_visit_has_secret_hints": {
+	"lines": [
+	  {
+		"speaker": "Sosuke",
+		"emotion": "default",
+		"text": "[speed:fast][b]Wait![/b][pause:0.3] [speed:normal]I know your [type:noun, eng:secret, jpn:秘密]",
+		"actions": [
+		  { "type": "open_choice_menu", "value": "Yuka" }
+		]
+	  }
+	]
+  },
+
+  "morning_place_truth": {
+	"lines": [
+	  {
+		"speaker": "Yuka",
+		"emotion": "default",
+		"text": "I was at [type:noun, eng:school, jpn:学校]. I went early, didn't even have [type:noun, eng:breakfast, jpn:朝ごはん].",
+		"actions": [
+		  {
+			"type": "knowledge_update",
+			"character": "Yuka",
+			"flag": "schedule.morning.sosuke_thinks_place",
+			"value": "School"
+		  }
+		]
+	  }
+	]
+  },
+
+  "afternoon_place_truth": {
+	"lines": [
+	  {
+		"speaker": "Yuka",
+		"emotion": "default",
+		"text": "I was at the [type:noun, eng:mall, jpn:ショッピングモール] with my friends.",
+		"actions": [
+		  {
+			"type": "knowledge_update",
+			"character": "Yuka",
+			"flag": "schedule.afternoon.sosuke_thinks_place",
+			"value": "Mall"
+		  }
+		]
+	  }
+	]
+  },
+
+  "evening_place_truth": {
+	"lines": [
+	  {
+		"speaker": "Yuka",
+		"emotion": "default",
+		"text": "I was in the [type:noun, eng:kitchen, jpn:台所].",
+		"actions": [
+		  {
+			"type": "knowledge_update",
+			"character": "Yuka",
+			"flag": "schedule.evening.sosuke_thinks_place",
+			"value": "Kitchen"
+		  }
+		]
+	  }
+	]
+  },
+
+  "school_activity_lie": {
+  },
+  "school_activity_truth": {
+	"lines": [
+	  {
+		"speaker": "Yuka",
+		"emotion": "default",
+		"text": "I had a [type:noun, eng:student council, jpn:] [type:noun, eng:meeting, jpn:]. It was so [type:adjective, eng:boring, jpn:] I almost [type:phrase, eng:fell asleep, jpn:].",
+		"actions": [
+		  {
+			"type": "knowledge_update",
+			"character": "Yuka",
+			"flag": "schedule.morning.sosuke_thinks_activity",
+			"value": "Student Council Meeting"
+		  }
+		]
+	  }
+	]
+  },
+
+  "mall_activity_lie": {
+  },
+  "mall_activity_truth": {
+	  "lines": [
+		{
+		  "speaker": "Yuka",
+		  "emotion": "default",
+		  "text": "[speed:slow]I was… I was at a [type:noun, eng:race, jpn:レース], okay!?",
+		  "actions": [
+			{
+			  "type": "knowledge_update",
+			  "character": "Yuka",
+			  "flag": "schedule.afternoon.yuka_activity",
+			  "value": "Racing"
+			}
+		  ]
+		},
+		{
+		  "speaker": "Yuka",
+		  "emotion": "default",
+		  "text": "It was me, [b]Speedy Sally[/b], and [b]Racer Randy[/b].",
+		},
+		{
+		  "speaker": "Yuka",
+		  "emotion": "confident",
+		  "text": "I thought I would [type:verb, eng:win, jpn:勝つ]. I'm way [type:adjective, eng:faster, jpn:より速い] than those two.",
+		},
+		{
+		  "speaker": "Yuka",
+		  "emotion": "sad",
+		  "text": "But I got a [type:noun, eng:flat tire, jpn:パンク] right before the finish line and [type:verb, eng:lost, jpn:負けた]!",
+		},
+		{
+		  "speaker": "Yuka",
+		  "emotion": "angry",
+		  "text": "[b][type:phrase, eng:Don't, jpn:ダメ][/b] you dare [type:verb, eng:tell, jpn:言う] [type:noun, eng:mom, jpn:お母さん] and [type:noun, eng:dad, jpn:お父さん]!",
+		}
+	  ]
+  },
+
+  "kitchen_activity_lie": {
+  },
+  "kitchen_activity_truth": {
+  },
+
+  "cake_lie": {
+	"lines": [
+	  {
+		"speaker": "Karin",
+		"emotion": "default",
+		"text": "I didn’t eat your [type:noun, eng:cake, jpn:ケーキ]."
+	  }
+	]
+  },
+
+  "cake_truth": {
+	"lines": [
+	  {
+		"speaker": "Yuka",
+		"emotion": "sad",
+		"text": "I was hungry okay!",
+		"actions": [
+		  {
+			"type": "knowledge_update",
+			"character": "Yuka",
+			"flag": "secret_info.sosuke_knows_cake",
+			"value": true
+		  }
+		]
+	  }
+	]
+  },
+
+  "reveal_secret": {
+  },
+
+  "jacket_found": {
+	"lines": [
+	  {
+		"speaker": "Sosuke",
+		"emotion": "default",
+		"text": "A leather jacket?",
+		"actions": [
+		  {
+			"type": "knowledge_update",
+			"character": "Yuka",
+			"flag": "secret_info.hint_1",
+			"value": true
+		  }
+		]
+	  },
+		{
+		"speaker": "Sosuke",
+		"emotion": "default",
+		"text": "It's not really Yuka's style..."
+		}
+	]
+},
+
+  "poster_found": {
+	"lines": [
+	  {
+		"speaker": "Sosuke",
+		"emotion": "default",
+		"text": "I didn't know Yuka liked cars so much...",
+		"actions": [
+		  {
+			"type": "knowledge_update",
+			"character": "Yuka",
+			"flag": "secret_info.hint_3",
+			"value": true
+		  }
+		]
+	  }
+	]
+},
+
+  "mechanics_box_found": {
+	"lines": [
+		{
+		"speaker": "Sosuke",
+		"emotion": "default",
+		"text": "A box of tools?",
+		"actions": [
+			{
+			"type": "knowledge_update",
+			"character": "Yuka",
+			"flag": "secret_info.hint_4",
+			"value": true
+		  }
+		]
+	  },
+		{
+		"speaker": "Sosuke",
+		"emotion": "default",
+		"text": "Seems like a strange thing to keep under the bed..."
+		}
+	]
+}
+
+
+
+
+
+}

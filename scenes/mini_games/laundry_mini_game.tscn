@@ -1,0 +1,699 @@
+[gd_scene load_steps=33 format=3 uid="uid://i6osl7868tqb"]
+
+[ext_resource type="Texture2D" uid="uid://n1xnq13fcbhi" path="res://assets/images/items/basket.png" id="1_byviq"]
+[ext_resource type="Script" uid="uid://cb4jsp1e43qn0" path="res://scripts/mini_games/laundry_mini_game.gd" id="1_hfkmb"]
+[ext_resource type="AudioStream" uid="uid://ctwio5x2hje0s" path="res://assets/audio/sfx/ui/Confirm 1.wav" id="3_jxt8w"]
+[ext_resource type="PackedScene" uid="uid://dbvahpd706vgu" path="res://scenes/mini_games/word_shirt.tscn" id="4_xlfha"]
+[ext_resource type="AudioStream" uid="uid://bfdhvjx32nrn4" path="res://assets/audio/sfx/ui/Celebrate_01.wav" id="5_4doww"]
+[ext_resource type="Script" uid="uid://wbhj1x5r2mbs" path="res://scripts/mini_games/laundry_basket.gd" id="5_xlfha"]
+[ext_resource type="AudioStream" uid="uid://wjfthj5rircc" path="res://assets/audio/music/Three Red Hearts - Princess Quest (No Boing).ogg" id="6_1jjvt"]
+[ext_resource type="Texture2D" uid="uid://65bkyqfy50d0" path="res://assets/images/items/laundry1.png" id="6_g8mkx"]
+[ext_resource type="Texture2D" uid="uid://du2ykxqxmoqmh" path="res://assets/images/items/laundry2.png" id="7_1jjvt"]
+[ext_resource type="AudioStream" uid="uid://d3wr2rtrgtrme" path="res://assets/audio/sfx/ui/Negative_Beep.ogg" id="7_1thm0"]
+[ext_resource type="FontFile" uid="uid://c2lvtb2jwo8e6" path="res://assets/fonts/BadComic-Regular.ttf" id="7_g8mkx"]
+[ext_resource type="Texture2D" uid="uid://dam1tsphf5nat" path="res://assets/images/items/laundry3.png" id="8_iftox"]
+[ext_resource type="PackedScene" uid="uid://bbxtvoxr3o46g" path="res://scenes/ui/buttons/options_button.tscn" id="9_4doww"]
+[ext_resource type="FontFile" uid="uid://dulrb2te632oi" path="res://assets/fonts/NotoSansJP-Regular.ttf" id="9_yc0oh"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hfkmb"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2akq4"]
+normal = Vector2(0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2akq4"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_byviq"]
+bg_color = Color(1, 1, 0.576471, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.351451, 0.367347, 0.825873, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 5
+shadow_offset = Vector2(-3, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2akq4"]
+size = Vector2(328, 58)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4doww"]
+bg_color = Color(0.6, 0.976471, 0.545098, 1)
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 10
+shadow_size = 10
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8mkx"]
+bg_color = Color(1, 0.564805, 0.491965, 0.705882)
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1jjvt"]
+bg_color = Color(1, 0.427326, 0.34349, 1)
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iftox"]
+bg_color = Color(0.960758, 0.111429, 5.77569e-06, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e10ct"]
+bg_color = Color(1, 0.337434, 0.251547, 1)
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1thm0"]
+bg_color = Color(2.64719e-06, 0.483284, 0.231581, 0.705882)
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jxt8w"]
+bg_color = Color(7.21961e-06, 0.885714, 0.445833, 1)
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yc0oh"]
+bg_color = Color(4.09111e-06, 0.653708, 0.322314, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e088j"]
+bg_color = Color(2.93598e-06, 0.734537, 0.365109, 1)
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="Animation" id="Animation_jxt8w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Game_Menu/Panel:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Game_Menu/Panel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Game_Menu/Panel:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_1thm0"]
+resource_name = "close_menu"
+length = 0.3
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Game_Menu/Panel:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.00136e-05, 1.00136e-05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Game_Menu/Panel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Game_Menu/Panel:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_4doww"]
+resource_name = "open_menu"
+length = 0.3
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Game_Menu/Panel:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Game_Menu/Panel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Game_Menu/Panel:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yc0oh"]
+_data = {
+&"RESET": SubResource("Animation_jxt8w"),
+&"close_menu": SubResource("Animation_1thm0"),
+&"open_menu": SubResource("Animation_4doww")
+}
+
+[node name="Laundry_Mini_Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_hfkmb")
+shirt_scene = ExtResource("4_xlfha")
+
+[node name="CorrectSound" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_jxt8w")
+volume_db = 10.0
+bus = &"SFX"
+
+[node name="WrongSound" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_1thm0")
+volume_db = 16.0
+bus = &"SFX"
+
+[node name="FinishSound" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_4doww")
+volume_db = 12.0
+
+[node name="MiniGame_Music" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("6_1jjvt")
+volume_db = -10.0
+bus = &"Music"
+parameters/looping = true
+
+[node name="Game_Area" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="TopCollision" type="CollisionShape2D" parent="Game_Area"]
+position = Vector2(0, -500)
+shape = SubResource("WorldBoundaryShape2D_hfkmb")
+
+[node name="LeftCollision" type="CollisionShape2D" parent="Game_Area"]
+position = Vector2(0, 1080)
+rotation = -1.5708
+shape = SubResource("WorldBoundaryShape2D_hfkmb")
+
+[node name="RightCollision" type="CollisionShape2D" parent="Game_Area"]
+position = Vector2(1920, 1080)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_2akq4")
+
+[node name="BottomPoly" type="CollisionPolygon2D" parent="Game_Area"]
+polygon = PackedVector2Array(-3, 1077, 100, 1078, 96, 798, 161, 1206, 497, 1206, 583, 804, 660, 804, 736, 1209, 1069, 1209, 1154, 808, 1311, 808, 1388, 1209, 1714, 1212, 1802, 804, 1797, 1079, 1922, 1083, 1938, 1267, -5, 1271)
+
+[node name="BG_Color" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0.882275, 0.99884, 1)
+
+[node name="BG_Sprites" type="Node2D" parent="."]
+modulate = Color(0.758192, 0.758192, 0.758192, 1)
+
+[node name="Laundry1" type="Sprite2D" parent="BG_Sprites"]
+position = Vector2(1090, 871)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("6_g8mkx")
+
+[node name="Laundry2" type="Sprite2D" parent="BG_Sprites"]
+position = Vector2(1784, 954)
+texture = ExtResource("7_1jjvt")
+
+[node name="Laundry3" type="Sprite2D" parent="BG_Sprites"]
+position = Vector2(183, 685)
+texture = ExtResource("8_iftox")
+flip_h = true
+
+[node name="Laundry4" type="Sprite2D" parent="BG_Sprites"]
+position = Vector2(176, 950)
+texture = ExtResource("8_iftox")
+
+[node name="TimerLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 741.0
+offset_top = -523.0
+offset_right = 916.0
+offset_bottom = -439.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(88, 49)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_g8mkx")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_2akq4")
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PointsLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -912.0
+offset_top = -506.0
+offset_right = -762.0
+offset_bottom = -356.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(75, 79)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("7_g8mkx")
+theme_override_font_sizes/font_size = 86
+theme_override_styles/normal = SubResource("StyleBoxFlat_byviq")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpawnTimer" type="Timer" parent="."]
+
+[node name="GameTimer" type="Timer" parent="."]
+
+[node name="Shirts" type="Node2D" parent="."]
+
+[node name="BasketContainer" type="Node2D" parent="."]
+z_index = 1
+
+[node name="Basket1" type="Sprite2D" parent="BasketContainer"]
+position = Vector2(338, 940)
+texture = ExtResource("1_byviq")
+script = ExtResource("5_xlfha")
+theme = "Fruits"
+
+[node name="BasketLabel" type="Label" parent="BasketContainer/Basket1"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -431.0
+offset_top = -311.0
+offset_right = -81.0
+offset_bottom = -201.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_g8mkx")
+theme_override_font_sizes/font_size = 86
+theme_override_styles/normal = SubResource("StyleBoxFlat_2akq4")
+text = "Fruits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollectionArea" type="Area2D" parent="BasketContainer/Basket1"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BasketContainer/Basket1/CollectionArea"]
+position = Vector2(-8, 239)
+shape = SubResource("RectangleShape2D_2akq4")
+
+[node name="Basket2" type="Sprite2D" parent="BasketContainer"]
+position = Vector2(910, 940)
+texture = ExtResource("1_byviq")
+script = ExtResource("5_xlfha")
+theme = "Vegetables"
+
+[node name="BasketLabel" type="Label" parent="BasketContainer/Basket2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -431.0
+offset_top = -311.0
+offset_right = -81.0
+offset_bottom = -201.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_g8mkx")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_2akq4")
+text = "Vegetables"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollectionArea" type="Area2D" parent="BasketContainer/Basket2"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BasketContainer/Basket2/CollectionArea"]
+position = Vector2(-8, 239)
+shape = SubResource("RectangleShape2D_2akq4")
+
+[node name="Basket3" type="Sprite2D" parent="BasketContainer"]
+position = Vector2(1560, 942)
+texture = ExtResource("1_byviq")
+script = ExtResource("5_xlfha")
+theme = "Animals"
+
+[node name="BasketLabel" type="Label" parent="BasketContainer/Basket3"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -431.0
+offset_top = -311.0
+offset_right = -81.0
+offset_bottom = -201.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_g8mkx")
+theme_override_font_sizes/font_size = 86
+theme_override_styles/normal = SubResource("StyleBoxFlat_2akq4")
+text = "Animals"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollectionArea" type="Area2D" parent="BasketContainer/Basket3"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BasketContainer/Basket3/CollectionArea"]
+position = Vector2(-8, 239)
+shape = SubResource("RectangleShape2D_2akq4")
+
+[node name="Game_Menu" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="Game_Menu"]
+custom_minimum_size = Vector2(800, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -310.0
+offset_right = 400.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(409, 240)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_4doww")
+
+[node name="Menu_Points_Label" type="Label" parent="Game_Menu/Panel"]
+layout_mode = 2
+offset_left = 62.5
+offset_top = 76.0
+offset_right = 737.5
+offset_bottom = 180.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_g8mkx")
+theme_override_font_sizes/font_size = 86
+text = "Points: xx"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tiny_Label" type="Label" parent="Game_Menu/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -337.5
+offset_top = -61.0
+offset_right = 337.5
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("9_yc0oh")
+theme_override_font_sizes/font_size = 32
+text = "*15点は合格"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Game_Menu/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -337.5
+offset_top = -70.5
+offset_right = 337.5
+offset_bottom = 70.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 150
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Game_Menu/Panel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 75
+
+[node name="Restart_Button" parent="Game_Menu/Panel/MarginContainer/HBoxContainer" instance=ExtResource("9_4doww")]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_styles/disabled = SubResource("StyleBoxFlat_g8mkx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1jjvt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_iftox")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e10ct")
+text = "Restart"
+
+[node name="Continue_Button" parent="Game_Menu/Panel/MarginContainer/HBoxContainer" instance=ExtResource("9_4doww")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_styles/disabled = SubResource("StyleBoxFlat_1thm0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jxt8w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yc0oh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e088j")
+text = "Continue"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_yc0oh")
+}
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
+[connection signal="timeout" from="GameTimer" to="." method="_on_GameTimer_timeout"]
+[connection signal="body_entered" from="BasketContainer/Basket1/CollectionArea" to="BasketContainer/Basket1" method="_on_body_entered"]
+[connection signal="body_entered" from="BasketContainer/Basket2/CollectionArea" to="BasketContainer/Basket2" method="_on_body_entered"]
+[connection signal="body_entered" from="BasketContainer/Basket3/CollectionArea" to="BasketContainer/Basket3" method="_on_body_entered"]
+[connection signal="pressed" from="Game_Menu/Panel/MarginContainer/HBoxContainer/Restart_Button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="Game_Menu/Panel/MarginContainer/HBoxContainer/Continue_Button" to="." method="_on_continue_button_pressed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7uvdj7tni56u"
-path="res://.godot/imported/Sosuke_default.png-e579b497e4feb5cdc891c6e130ca0fea.ctex"
+uid="uid://jxlcnror7kfd"
+path="res://.godot/imported/Sosuke_Default.png-62e7ee551990c0ab74913e859dd1c678.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/characters/Sosuke/Sosuke_default.png"
-dest_files=["res://.godot/imported/Sosuke_default.png-e579b497e4feb5cdc891c6e130ca0fea.ctex"]
+source_file="res://scenes/characters/Sosuke/Sosuke_Default.png"
+dest_files=["res://.godot/imported/Sosuke_Default.png-62e7ee551990c0ab74913e859dd1c678.ctex"]
 
 [params]
 

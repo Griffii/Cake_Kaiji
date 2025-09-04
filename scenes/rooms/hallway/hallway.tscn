@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bf6y2qeeiwjd6"]
+[gd_scene load_steps=3 format=3 uid="uid://bf6y2qeeiwjd6"]
 
+[ext_resource type="Script" uid="uid://c28f75tkw0tdy" path="res://scenes/rooms/hallway/hallway.gd" id="1_o57v5"]
 [ext_resource type="Texture2D" uid="uid://bt7pmpy4jslod" path="res://scenes/rooms/hallway/Hallway_01.png" id="1_wrxb8"]
 
 [node name="Hallway" type="Control"]
@@ -10,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+script = ExtResource("1_o57v5")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1

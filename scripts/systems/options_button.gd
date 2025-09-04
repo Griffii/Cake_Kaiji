@@ -8,6 +8,8 @@ func _ready() -> void:
 	pivot_offset = size / 2
 
 func _on_mouse_entered() -> void:
+	if disabled:
+		return
 	scale = Vector2(1.05,1.05)
 	SceneManager.play_hover_sfx()
 func _on_mouse_exited() -> void:

@@ -1,0 +1,283 @@
+{
+	"intro": {
+		"lines": [
+			{
+				"speaker": "Karin",
+				"emotion": "default",
+				"text": "[type:interjection, eng:Hello, jpn:こんにちは] [type:proper_noun, eng:Sosuke, jpn:そうすけ], do you [type:verb, eng:need, jpn:必要] [type:noun, eng:something, jpn:何か]?"
+			}
+		]
+	},
+
+	"question": {
+		"lines": [
+			{
+				"speaker": "Sosuke",
+				"emotion": "default",
+				"text": "I have some [type:noun, eng:questions, jpn:質問] for you.",
+				"actions": [
+					{ "type": "open_choice_menu", "value": "Karin" }
+				]
+			}
+		]
+	},
+
+	"morning_place_truth": {
+		"lines": [
+			{
+				"speaker": "Karin",
+				"emotion": "default",
+				"text": "I was in the [type:noun, eng:kitchen, jpn:台所].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Karin",
+					  "flag": "schedule.morning.sosuke_thinks_place",
+					  "value": "Kitchen"
+					}
+				]
+			}
+		]
+	},
+
+	"afternoon_place_truth": {
+		"lines": [
+			{
+				"speaker": "Karin",
+				"emotion": "default",
+				"text": "I was in the [type:noun, eng:kitchen, jpn:台所], [type:conjunction, eng:and then, jpn:そして] the [type:noun, eng:laundry room, jpn:洗濯室].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Karin",
+					  "flag": "schedule.afternoon.sosuke_thinks_place",
+					  "value": "Laundry Room"
+					}
+				]
+			}
+		]
+	},
+
+	"evening_place_truth": {
+		"lines": [
+			{
+				"speaker": "Karin",
+				"emotion": "default",
+				"text": "I was in the [type:noun, eng:yard, jpn:庭].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Karin",
+					  "flag": "schedule.evening.sosuke_thinks_place",
+					  "value": "Yard"
+					}
+				]
+			}
+		]
+	},
+
+	"kitchen_activity_truth": {
+		"lines": [
+			{
+				"speaker": "Karin",
+				"emotion": "default",
+				"text": "I was [type:phrase, eng:making breakfast, jpn:朝ごはんを作っていた] in the [type:noun, eng:morning, jpn:朝].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Karin",
+					  "flag": "schedule.morning.sosuke_thinks_activity",
+					  "value": "Making breakfast"
+					}
+				]
+			},
+			{
+				"speaker": "Karin",
+				"emotion": "default",
+				"text": "[type:conjunction, eng:But, jpn:でも], in the [type:noun, eng:afternoon, jpn:午後] I was [type:phrase, eng:getting extra apples from the fridge, jpn:冷蔵庫から追加のリンゴを取っていた]."
+			},
+			{
+				"speaker": "Karin",
+				"emotion": "default",
+				"text": "I didn’t have enough for the [type:noun, eng:raccoons, jpn:たぬき]."
+			},
+			{
+				"speaker": "Karin",
+				"emotion": "thinking",
+				"text": "[type:phrase, eng:Now that I think about it, jpn:今思えば]…"
+			},
+			{
+				"speaker": "Karin",
+				"emotion": "default",
+				"text": "I [type:phrase, eng:took your cake out of the fridge, jpn:ケーキを冷蔵庫から出した] and put it on the [type:noun, eng:counter, jpn:カウンター]."
+			},
+			{
+				"speaker": "Karin",
+				"emotion": "default",
+				"text": "[type:conjunction, eng:But, jpn:でも] I forgot about it because I was in a [type:noun, eng:hurry, jpn:急ぎ]."
+			},
+			{
+				"speaker": "Karin",
+				"emotion": "sad",
+				"text": "When I came back, it was [type:adjective, eng:gone, jpn:なくなった]!"
+			},
+			{
+				"speaker": "Karin",
+				"emotion": "sad",
+				"text": "I didn’t [type:verb, eng:eat, jpn:食べる] it, I [type:verb, eng:promise, jpn:約束する].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Karin",
+					  "flag": "schedule.secret_info.sosuke_knows_cake",
+					  "value": true
+					}
+				]
+			}
+		]
+	},
+
+	"kitchen_activity_lie": {
+		"lines": [
+			{
+				"speaker": "Karin",
+				"emotion": "default",
+				"text": "I was [type:phrase, eng:making breakfast, jpn:朝ごはんを作っていた] in the [type:noun, eng:morning, jpn:朝], and [type:phrase, eng:cleaning up, jpn:片付けていた] in the [type:noun, eng:afternoon, jpn:午後].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Karin",
+					  "flag": "schedule.morning.sosuke_thinks_activity",
+					  "value": "Making breakfast"
+					},
+					{
+					  "type": "knowledge_update",
+					  "character": "Karin",
+					  "flag": "schedule.afternoon.sosuke_thinks_activity",
+					  "value": "Cleaning up"
+					}
+				]
+			}
+		]
+	},
+
+	"laundry_room_activity_lie": {
+		"lines": [
+			{
+				"speaker": "Karin",
+				"emotion": "default",
+				"text": "I was [type:phrase, eng:doing laundry, jpn:洗濯をしていた].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Karin",
+					  "flag": "schedule.afternoon.sosuke_thinks_activity",
+					  "value": "Doing laundry"
+					}
+				]
+			}
+		]
+	},
+
+	"laundry_room_activity_truth": {
+		"lines": [
+			{
+				"speaker": "Karin",
+				"emotion": "default",
+				"text": "I was in the [type:adjective, eng:secret, jpn:秘密の] room, making a [type:phrase, eng:deal with the raccoons, jpn:アライグマと取引していた]."
+			},
+			{
+				"speaker": "Karin",
+				"emotion": "default",
+				"text": "They bought [type:phrase, eng:3 barrels of apple juice, jpn:リンゴジュースを3樽], I barely had enough.",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Karin",
+					  "flag": "schedule.afternoon.sosuke_thinks_activity",
+					  "value": "Selling apple juice to raccoons"
+					}
+				]
+			}
+		]
+	},
+
+	"yard_activity_lie": {
+		"lines": [
+			{
+				"speaker": "Karin",
+				"emotion": "default",
+				"text": "I was [type:phrase, eng:drying the laundry, jpn:洗濯物を干していた].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Karin",
+					  "flag": "schedule.evening.sosuke_thinks_activity",
+					  "value": "Drying laundry"
+					}
+				]
+			}
+		]
+	},
+
+	"yard_activity_truth": {
+		"lines": [
+			{
+				"speaker": "Karin",
+				"emotion": "default",
+				"text": "I was [type:phrase, eng:picking apples, jpn:リンゴを取っていた].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Karin",
+					  "flag": "schedule.evening.sosuke_thinks_activity",
+					  "value": "Picking apples"
+					}
+				]
+			},
+			{
+				"speaker": "Karin",
+				"emotion": "default",
+				"text": "It was [type:adjective, eng:peaceful, jpn:平和], no one else was outside."
+			}
+		]
+	},
+
+	"cake_lie": {
+		"lines": [
+			{
+				"speaker": "Karin",
+				"emotion": "default",
+				"text": "[type:interjection, eng:No, jpn:いいえ] dear, I didn’t [type:verb, eng:eat, jpn:食べる] any of your [type:noun, eng:cake, jpn:ケーキ]."
+			}
+		]
+	},
+
+	"cake_truth": {
+		"lines": [
+			{
+				"speaker": "Karin",
+				"emotion": "sad",
+				"text": "I [type:verb, eng:forgot, jpn:忘れた] it on the [type:noun, eng:counter, jpn:カウンター], but I didn’t [type:verb, eng:eat, jpn:食べる] it."
+			}
+		]
+	},
+
+	"reveal_secret": {
+		"lines": [
+			{
+				"speaker": "Karin",
+				"emotion": "default",
+				"text": "I’ve been [type:verb, eng:trading, jpn:取引していた] [type:preposition, eng:with, jpn:と] [type:noun, eng:raccoons, jpn:たぬき].",
+				"actions": [
+					{
+					  "type": "knowledge_update",
+					  "character": "Karin",
+					  "flag": "secret_info.sosuke_knows_secret",
+					  "value": true
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,8 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1wsnxgixadck"]
+[gd_scene load_steps=7 format=3 uid="uid://b1wsnxgixadck"]
 
 [ext_resource type="Script" uid="uid://u0bmlwkw70op" path="res://scenes/rooms/yukas_room/yukas_room.gd" id="1_brafn"]
-[ext_resource type="Texture2D" uid="uid://b1tf68o2r7xxa" path="res://scenes/rooms/yukas_room/Yukas_Room_01.png" id="1_hhlir"]
-[ext_resource type="Texture2D" uid="uid://dt60p7t364fm" path="res://scenes/characters/Yuka/Yuka_default.png" id="3_8abi5"]
+[ext_resource type="Texture2D" uid="uid://dwe8pc3nlnlvs" path="res://scenes/rooms/yukas_room/Yukas_Room_Pixel_01.png" id="2_brafn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8abi5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pq5cl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1qwpe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lpyg4"]
 
 [node name="Yukas_Room" type="Control"]
 layout_mode = 3
@@ -21,14 +28,50 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_hhlir")
+texture = ExtResource("2_brafn")
 
-[node name="Yuka" type="TextureButton" parent="."]
+[node name="Yuka" type="Button" parent="."]
 layout_mode = 0
-offset_left = 648.0
-offset_top = 356.0
-offset_right = 904.0
-offset_bottom = 612.0
-texture_normal = ExtResource("3_8abi5")
+offset_left = 880.0
+offset_top = 264.0
+offset_right = 1261.0
+offset_bottom = 949.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8abi5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_pq5cl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_1qwpe")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lpyg4")
+
+[node name="Jacket_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 472.0
+offset_right = 395.0
+offset_bottom = 552.0
+text = "Leather Jacket?"
+
+[node name="Poster_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 612.0
+offset_top = 411.0
+offset_right = 804.0
+offset_bottom = 491.0
+text = "Racing Poster"
+
+[node name="Box_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1484.0
+offset_top = 968.0
+offset_right = 1676.0
+offset_bottom = 1048.0
+text = "Box of Tools"
+
+[node name="Yuka_Button" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="pressed" from="Yuka" to="." method="_on_yuka_pressed"]
+[connection signal="pressed" from="Jacket_Button" to="." method="_on_jacket_pressed"]
+[connection signal="pressed" from="Poster_Button" to="." method="_on_poster_pressed"]
+[connection signal="pressed" from="Box_Button" to="." method="_on_box_pressed"]

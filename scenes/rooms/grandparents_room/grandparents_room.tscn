@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dwp6dwmvgy73r"]
+[gd_scene load_steps=4 format=3 uid="uid://dwp6dwmvgy73r"]
 
+[ext_resource type="Script" uid="uid://c7dg2dcddfi3m" path="res://scenes/rooms/grandparents_room/grandparents_room.gd" id="1_cs4mu"]
 [ext_resource type="Texture2D" uid="uid://dyk5aqkf2o8mw" path="res://scenes/rooms/grandparents_room/Grandparents_Room_01.png" id="1_xy1gf"]
+[ext_resource type="Texture2D" uid="uid://ed33ph5im2jr" path="res://scenes/characters/Kiyomi/Kiyomi_Default_Full.png" id="3_cs4mu"]
 
 [node name="Grandparents_Room" type="Control"]
 layout_mode = 3
@@ -10,8 +12,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+script = ExtResource("1_cs4mu")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="BG_Texture" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,3 +22,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_xy1gf")
+
+[node name="KiyomiDefaultFull" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 639.0
+offset_top = 195.0
+offset_right = 1663.0
+offset_bottom = 1731.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("3_cs4mu")
+flip_h = true
+
+[connection signal="pressed" from="KiyomiDefaultFull" to="." method="_on_grandma_pressed"]

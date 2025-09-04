@@ -1,7 +1,7 @@
 extends Control
 
 @export var character_name: String
-@onready var character_ref = get_node("/root/" + character_name)
+@onready var character_ref = CharacterData.characters[character_name]
 @onready var portrait_area = %Portrait_Box
 
 var secret_hint_1

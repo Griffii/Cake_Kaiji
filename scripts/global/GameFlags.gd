@@ -32,8 +32,11 @@ var flags = {
 	"story": {
 		"found_all_cake_pieces": false
 	}
-	
 }
+
+### Tracks unique IDs of all viewed dialogue conversations
+var viewed_dialogues: Dictionary = {}
+
 
 func get_flag(path: String) -> Variant:
 	var keys = path.split("/")

@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbvahpd706vgu"]
+
+[ext_resource type="Texture2D" uid="uid://kv8vync1d4ur" path="res://assets/images/shirts/shirt1.png" id="1_8801q"]
+[ext_resource type="Script" uid="uid://bu88e0vvtf7j8" path="res://scripts/mini_games/word_shirt.gd" id="1_vhqfc"]
+[ext_resource type="FontFile" uid="uid://c2lvtb2jwo8e6" path="res://assets/fonts/BadComic-Regular.ttf" id="2_vhqfc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gpaop"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Word_Shirt" type="RigidBody2D"]
+input_pickable = true
+gravity_scale = 0.5
+linear_damp = 1.0
+script = ExtResource("1_vhqfc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8801q")
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(175, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.5
+offset_top = -23.0
+offset_right = 87.5
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vhqfc")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_gpaop")
+text = "Pineapple"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-104, 160, -104, 0, -140, -7, -166, -19, -154, -97, -140, -139, -123, -154, -56, -179, -2, -171, 50, -178, 92, -168, 131, -148, 146, -127, 159, -71, 164, -20, 157, -14, 105, -2, 105, 161, 79, 169, 32, 178, -41, 177, -81, 172)

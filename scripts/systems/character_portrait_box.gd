@@ -12,18 +12,8 @@ signal character_changed_to(arg: String)
 
 func _ready() -> void:
 	if char_name and character_ref:
-		%Portrait.texture = CharacterData.characters[char_name]["portraits"]["default"]
+		%Portrait.texture = CharacterData.characters[char_name]["portraits"]["portrait"]
 		%BG_Color.color = CharacterData.characters[char_name]["bg_color_code"]
-	if flip_image:
-		%Portrait.flip_h = true
-
-func refresh_portrait():
-	# Make sure you refresh the script ref, wahtever called this probably set a new char_name
-	character_ref = get_node("/root/" + char_name)
-	
-	if char_name and character_ref:
-		%Portrait.texture = character_ref.default_portrait_image
-		%BG_Color.color = character_ref.bg_color_code
 	if flip_image:
 		%Portrait.flip_h = true
 

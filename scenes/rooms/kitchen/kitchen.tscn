@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b454v4gk0fvri"]
+[gd_scene load_steps=4 format=3 uid="uid://b454v4gk0fvri"]
 
 [ext_resource type="Script" uid="uid://040xg3kw4jst" path="res://scenes/rooms/kitchen/kitchen.gd" id="1_hsnni"]
-[ext_resource type="Texture2D" uid="uid://dngwf8utnm68a" path="res://scenes/rooms/kitchen/Kitchen_02.png" id="1_wd0d2"]
+[ext_resource type="Texture2D" uid="uid://dngwf8utnm68a" path="res://scenes/rooms/kitchen/Kitchen_02.png" id="2_hsnni"]
+[ext_resource type="Texture2D" uid="uid://dqqk3tlxti1ib" path="res://scenes/characters/Karin/Karin_Standing.png" id="3_lfg7h"]
 
 [node name="Kitchen" type="Control"]
 layout_mode = 3
@@ -13,11 +14,35 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_hsnni")
 
-[node name="BG" type="TextureRect" parent="."]
+[node name="Kitchen_BG" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_wd0d2")
+texture = ExtResource("2_hsnni")
+
+[node name="Mom" type="TextureButton" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1026.0
+offset_top = 223.0
+offset_right = 2050.0
+offset_bottom = 1759.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("3_lfg7h")
+flip_h = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1667.0
+offset_top = 712.0
+offset_right = 1898.0
+offset_bottom = 812.0
+theme_override_font_sizes/font_size = 24
+text = "Mom's Secret Hints
+"
+
+[connection signal="pressed" from="Mom" to="." method="_on_mom_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

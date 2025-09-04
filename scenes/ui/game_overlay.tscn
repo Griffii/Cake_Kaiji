@@ -1,9 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://cr3udxyrdmy8y"]
+[gd_scene load_steps=16 format=3 uid="uid://cr3udxyrdmy8y"]
 
 [ext_resource type="Script" uid="uid://dhtglflva1t36" path="res://scripts/systems/game_overlay.gd" id="1_c1djp"]
 [ext_resource type="FontFile" uid="uid://c2lvtb2jwo8e6" path="res://assets/fonts/BadComic-Regular.ttf" id="2_yhx2g"]
 [ext_resource type="AudioStream" uid="uid://cwpouhgynoh5p" path="res://assets/audio/sfx/ui/Minimalist_Click.ogg" id="3_s78s3"]
 [ext_resource type="AudioStream" uid="uid://cvqe21dmc5alj" path="res://assets/audio/sfx/ui/Wood_Block.ogg" id="4_1cu4j"]
+[ext_resource type="AudioStream" uid="uid://d3wr2rtrgtrme" path="res://assets/audio/sfx/ui/Negative_Beep.ogg" id="5_1cu4j"]
+[ext_resource type="AudioStream" uid="uid://b7af22wuj1cb8" path="res://assets/audio/sfx/ui/Taking_Notes.ogg" id="6_w56ii"]
+[ext_resource type="Texture2D" uid="uid://dovkarip63mr" path="res://assets/images/UI/note_taking.png" id="7_e2it2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yhx2g"]
 
@@ -24,7 +27,7 @@ shadow_size = 2
 shadow_offset = Vector2(2, 2)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s78s3"]
-bg_color = Color(1, 1, 1, 1)
+bg_color = Color(0.868985, 0.868985, 0.868985, 1)
 border_width_right = 3
 border_width_bottom = 3
 border_color = Color(0, 0, 0, 1)
@@ -58,7 +61,7 @@ shadow_size = 2
 shadow_offset = Vector2(2, 2)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64sri"]
-bg_color = Color(0.838897, 0.838897, 0.838897, 1)
+bg_color = Color(0.91664, 0.91664, 0.91664, 1)
 border_width_right = 3
 border_width_bottom = 3
 border_color = Color(0, 0, 0, 1)
@@ -72,6 +75,91 @@ expand_margin_left = 10.0
 expand_margin_right = 10.0
 shadow_size = 2
 shadow_offset = Vector2(2, 2)
+
+[sub_resource type="Animation" id="Animation_e2it2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("notes_sfx:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Notepad_UI:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Notepad_UI:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_w56ii"]
+resource_name = "update_notebook"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Notepad_UI:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("notes_sfx:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Notepad_UI:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ykn7c"]
+_data = {
+&"RESET": SubResource("Animation_e2it2"),
+&"update_notebook": SubResource("Animation_w56ii")
+}
 
 [node name="Game_Overlay" type="CanvasLayer"]
 script = ExtResource("1_c1djp")
@@ -105,6 +193,27 @@ bus = &"SFX"
 [node name="click_sfx" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_1cu4j")
 bus = &"SFX"
+
+[node name="error_sfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_1cu4j")
+volume_db = 8.0
+bus = &"SFX"
+
+[node name="notes_sfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_w56ii")
+volume_db = 3.0
+bus = &"SFX"
+
+[node name="Notepad_UI" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1841, 78)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_e2it2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ykn7c")
+}
 
 [connection signal="mouse_entered" from="Journal_Button" to="." method="_on_journal_button_mouse_entered"]
 [connection signal="mouse_exited" from="Journal_Button" to="." method="_on_journal_button_mouse_exited"]

@@ -9,7 +9,7 @@ extends CanvasLayer
 @export var dialogue_font: Font
 @export var italic_font: Font
 @export var bold_font: Font
-@export var dialogue_font_size: int = 42
+@export var dialogue_font_size: int = 52
 
 var dialogue_data = {}         # Stores loaded JSON dialogue
 var current_lines = []         # Current dialogue lines
@@ -37,14 +37,30 @@ func _ready():
 	type_timer.timeout.connect(_on_type_timer_timeout)
 	add_child(type_timer)
 
-func _process(delta: float) -> void:
-	pass
+func _process(_delta: float) -> void:
+	# Toggle buttons based on current state
+	if current_index == current_lines.size() - 1:
+		if SceneManager.in_choice_menu:
+			SceneManager.choice_menu_paused = false
+			%NextButton.disabled = true
+		else:
+			# Dim, but dont disable
+			%NextButton.modulate = Color(0.6, 0.6, 0.6, 1)  # Slight gray tone
+	else:
+		%NextButton.disabled = false
+		%NextButton.modulate = Color(1,1,1,1)
+	
+	if current_index > 0:
+		%BackButton.disabled = false
+	else:
+		%BackButton.disabled = true
 
 ### INPUT HANDLING ###
 func _on_gui_input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		if SceneManager.in_dialogue and !SceneManager.in_menu:
-			on_next_pressed()
+		if SceneManager.in_dialogue:
+			if !SceneManager.in_menu or SceneManager.in_choice_menu:
+				on_next_pressed()
 
 
 ### LOAD AND START DIALOGUE ###
@@ -63,6 +79,11 @@ func start_dialogue(dialogue_tree: String, dialogue_id: String):
 	load_dialogue_data(dialogue_tree)
 	
 	if dialogue_id in dialogue_data:
+		# If the dailogue tree exists, check if it was started while in the choice menu
+		# If it was, "pause" the choice menu to allow dialogue traversal until the end of the dialogue tree
+		if SceneManager.in_choice_menu:
+			SceneManager.choice_menu_paused = true
+		
 		var dialogue_block = dialogue_data[dialogue_id]
 		current_lines = dialogue_block.get("lines", [])
 		current_index = 0
@@ -78,9 +99,9 @@ func start_dialogue(dialogue_tree: String, dialogue_id: String):
 		play_fade_in()
 		await get_tree().create_timer(0.5).timeout
 		show_line(current_index)
-		
 	else:
 		push_error("Dialogue ID not found: " + dialogue_id)
+		queue_free() # Kill yourself if there is no Dialogue to play
 
 
 ### SHOW LINE ###
@@ -117,7 +138,7 @@ func show_line(index: int):
 		if token.get("is_vocab", false):
 			var vocab_instance = preload("res://scenes/ui/vocab.tscn").instantiate()
 			dialogue_container.add_child(vocab_instance)
-			vocab_instance.set_data(token["eng"], token["jpn"], "word")
+			vocab_instance.set_data(token["type"], token["eng"], token["jpn"])
 		else:
 			var lbl = Label.new()
 			dialogue_container.add_child(lbl)
@@ -134,12 +155,12 @@ func show_line(index: int):
 				lbl.add_theme_font_override("font", dialogue_font)
 			
 			lbl.add_theme_font_size_override("font_size", dialogue_font_size)
-
 	
 	# Now start typing fresh
 	is_typing = true
 	type_timer.wait_time = text_speed
 	type_timer.start()
+
 
 
 ### TYPEWRITER EFFECT ###
@@ -261,10 +282,32 @@ func do_actions():
 				
 				"knowledge_update":
 					var character = action.get("character", "")
-					var flag = action.get("flag", "")
+					var flag_path = action.get("flag", "")
 					var value = action.get("value", false)
+					
 					if CharacterData.characters.has(character):
-						CharacterData.characters[character][flag] = value
+						var current = CharacterData.characters[character]
+						var keys = flag_path.split(".")
+						
+						# Traverse through nested keys
+						for i in range(keys.size() - 1):
+							if current.has(keys[i]):
+								current = current[keys[i]]
+							else:
+								push_error("Invalid flag path: " + flag_path)
+								return
+						
+						var last_key = keys[keys.size() - 1]
+						if current.has(last_key):
+							# Only update if value is different
+							if current[last_key] != value:
+								current[last_key] = value
+								SceneManager.play_update_notebook()
+								print("Knowledge Update: ", character, " - ", flag_path, " = ", value)
+							else:
+								print("Knowledge unchanged for ", character, " (", flag_path, ") → already ", str(value))
+						else:
+							push_error("Invalid final key in path: " + last_key)
 				
 				"signal":
 					var sig = action["value"]
@@ -283,38 +326,75 @@ func do_actions():
 ### CHARACTER INFO ###
 func _set_character_info(line: Dictionary):
 	var speaker = line.get("speaker", "")
-	var emotion = line.get("emotion", "default")
-	if character_data.has(speaker):
-		var char_info = character_data[speaker]
+	var emotion = line.get("emotion", "default") # fallback to default
+	
+	if CharacterData.characters.has(speaker):
+		var char_info = CharacterData.characters[speaker]
+		var is_new_speaker : bool
+		
+		# If it's a different speaker, play the animation
+		if name_label.text != char_info["character_name"]:
+			is_new_speaker = true
+		
+		if is_new_speaker:
+			anim_player.play("character_out")
+		
+		# Set name and background color
 		name_label.text = char_info["character_name"]
 		name_label.get_theme_stylebox("normal").bg_color = Color(char_info["bg_color_code"])
-		portrait_sprite.texture = char_info["portraits"].get(emotion, char_info["portraits"]["default"])
+		
+		# Get portrait by emotion
+		var portraits = char_info.get("portraits", {})
+		if portraits.has(emotion):
+			portrait_sprite.texture = portraits[emotion]
+		else:
+			# fallback if the emotion doesn't exist
+			print("Emotion not found, setting to 'default'.")
+			portrait_sprite.texture = portraits.get("default", null)
+		
+		if is_new_speaker:
+			anim_player.play("character_in")
+	
+	# Make dialogue box speaker info blank if no speaker is set
+	else:
+		portrait_sprite.texture = null
+		name_label.text = ""
 
 
 ### Parsing ###
 func parse_text(raw_text: String) -> Array:
 	var tokens: Array = []
 	var regex = RegEx.new()
-	# Combined pattern: vocab, italic, bold, speed
-	regex.compile("\\[type:(word|phrase),\\s*eng:([^,]+),\\s*jpn:([^\\]]+)\\]|\\[i\\](.*?)\\[/i\\]|\\[b\\](.*?)\\[/b\\]|\\[speed:(slow|fast|normal)\\]|\\[pause:([0-9\\.]+)\\]")
+	# Updated pattern to accept any word type (noun, verb, etc.) OR phrase
+	regex.compile("\\[type:([^,]+),\\s*eng:([^,]+),\\s*jpn:([^\\]]+)\\]|\\[i\\](.*?)\\[/i\\]|\\[b\\](.*?)\\[/b\\]|\\[speed:(slow|fast|normal)\\]|\\[pause:([0-9\\.]+)\\]")
 	
 	var start = 0
 	for match in regex.search_all(raw_text):
 		if match.get_start() > start:
-			tokens.append({ "text": raw_text.substr(start, match.get_start() - start), "is_vocab": false, "is_italic": false, "is_bold": false })
+			tokens.append({
+				"text": raw_text.substr(start, match.get_start() - start),
+				"is_vocab": false,
+				"is_italic": false,
+				"is_bold": false
+			})
 		
 		if match.get_string(1) != "":
-			# Vocab
+			# Vocab token
+			var vocab_type = match.get_string(1).strip_edges() # e.g., noun, verb, phrase
+			var vocab_eng = match.get_string(2).strip_edges()
+			var vocab_jpn = match.get_string(3).strip_edges()
+			
 			tokens.append({
-				"text": match.get_string(2).strip_edges(),
+				"text": vocab_eng,
 				"is_vocab": true,
 				"is_italic": false,
 				"is_bold": false,
-				"eng": match.get_string(2).strip_edges(),
-				"jpn": match.get_string(3).strip_edges()
+				"eng": vocab_eng,
+				"jpn": vocab_jpn,
+				"type": vocab_type
 			})
 		elif match.get_string(4) != "":
-			# Italic
+			# Italic text
 			tokens.append({
 				"text": match.get_string(4),
 				"is_vocab": false,
@@ -322,7 +402,7 @@ func parse_text(raw_text: String) -> Array:
 				"is_bold": false
 			})
 		elif match.get_string(5) != "":
-			# Bold
+			# Bold text
 			tokens.append({
 				"text": match.get_string(5),
 				"is_vocab": false,
@@ -330,12 +410,13 @@ func parse_text(raw_text: String) -> Array:
 				"is_bold": true
 			})
 		elif match.get_string(6) != "":
-			# Speed token
+			# Speed change
 			tokens.append({
 				"type": "speed",
 				"value": match.get_string(6)
 			})
 		elif match.get_string(7) != "":
+			# Pause
 			tokens.append({
 				"type": "pause",
 				"duration": float(match.get_string(7))
@@ -344,27 +425,58 @@ func parse_text(raw_text: String) -> Array:
 		start = match.get_end()
 	
 	if start < raw_text.length():
-		tokens.append({ "text": raw_text.substr(start, raw_text.length() - start), "is_vocab": false, "is_italic": false, "is_bold": false })
+		tokens.append({
+			"text": raw_text.substr(start, raw_text.length() - start),
+			"is_vocab": false,
+			"is_italic": false,
+			"is_bold": false
+		})
 	
 	return tokens
 
 
+
 ### BUTTON FUNCTIONS ###
 func on_next_pressed():
+	await get_tree().process_frame
+	
+	if is_in_animation:
+		return
+	
+	# If typing → finish the current line instantly
 	if is_typing:
 		is_typing = false
 		visible_char_count = get_total_text_length()
 		update_typed_text()
-		# Force all vocab nodes to update their collision to final size
+		type_timer.stop()
+		do_actions()
+		
+		# Force vocab reveal
 		for child in dialogue_container.get_children():
 			if child.has_method("force_full_reveal"):
 				child.force_full_reveal()
+		
 		return
 	
+	# Block if choice menu is active and NOT paused
+	if SceneManager.in_choice_menu and !SceneManager.choice_menu_paused:
+		return
+	
+	
+	
+	
+	# Otherwise, move forward
 	current_index += 1
 	show_line(current_index)
 
 func on_back_pressed():
+	await get_tree().process_frame
+	
+	%NextButton.disabled = false
+	
+	# Allow re-pausing and backward movement
+	if SceneManager.in_choice_menu and !SceneManager.choice_menu_paused:
+		SceneManager.choice_menu_paused = true
 	if current_index > 0:
 		current_index -= 1
 		show_line(current_index)
@@ -388,8 +500,5 @@ func play_fade_out():
 
 func end_dialogue():
 	play_fade_out()
-	current_lines.clear()
-	current_index = 0
 	await anim_player.animation_finished
-	await get_tree().create_timer(0.5).timeout
 	queue_free()

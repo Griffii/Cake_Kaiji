@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt60p7t364fm"
-path="res://.godot/imported/Yuka_default.png-b1b253b8c392b6670862369fe5ea2d6b.ctex"
+uid="uid://bsiykpf132145"
+path="res://.godot/imported/Yuka_Default.png-72e6d432a9fa30b465f7663bc9ef53d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/characters/Yuka/Yuka_default.png"
-dest_files=["res://.godot/imported/Yuka_default.png-b1b253b8c392b6670862369fe5ea2d6b.ctex"]
+source_file="res://scenes/characters/Yuka/Yuka_Default.png"
+dest_files=["res://.godot/imported/Yuka_Default.png-72e6d432a9fa30b465f7663bc9ef53d8.ctex"]
 
 [params]
 

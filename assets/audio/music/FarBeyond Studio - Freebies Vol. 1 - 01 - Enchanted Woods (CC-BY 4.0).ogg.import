@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cc5sdl7nf7lu2"
+path="res://.godot/imported/FarBeyond Studio - Freebies Vol. 1 - 01 - Enchanted Woods (CC-BY 4.0).ogg-db3723b45b7497be4edf4388cc0b808d.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/music/FarBeyond Studio - Freebies Vol. 1 - 01 - Enchanted Woods (CC-BY 4.0).ogg"
+dest_files=["res://.godot/imported/FarBeyond Studio - Freebies Vol. 1 - 01 - Enchanted Woods (CC-BY 4.0).ogg-db3723b45b7497be4edf4388cc0b808d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
